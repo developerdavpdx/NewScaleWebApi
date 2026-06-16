@@ -1,0 +1,474 @@
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\appsettings.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.exe
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.runtimeconfig.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\FluentScheduler.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Humanizer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\INIFileParser.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Renci.SshNet.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\SshNet.Security.Cryptography.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\Sap.Data.Hana.Core.v2.1.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\Interop.SAPbobsCOM.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.ResolveComReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.WebApiPtmHana.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\scopedcss\bundle\WebApiPtmHana.styles.css
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPt.78FF04CA.Up2Date
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\refint\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.genruntimeconfig.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana\obj\Debug\net6.0\ref\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\appsettings.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.exe
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.runtimeconfig.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\FluentScheduler.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Humanizer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\INIFileParser.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Renci.SshNet.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\SshNet.Security.Cryptography.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Sap.Data.Hana.Core.v2.1.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\Interop.SAPbobsCOM.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.ResolveComReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.WebApiPtmHana.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApiPtmHana.props
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\scopedcss\bundle\WebApiPtmHana.styles.css
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPt.78FF04CA.Up2Date
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\refint\WebApiPtmHana.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.genruntimeconfig.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\ref\WebApiPtmHana.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\appsettings.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.staticwebassets.endpoints.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.exe
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.deps.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.runtimeconfig.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\FluentScheduler.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Humanizer.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\INIFileParser.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Renci.SshNet.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\SshNet.Security.Cryptography.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\Sap.Data.Hana.Core.v2.1.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\Interop.SAPbobsCOM.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.ResolveComReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\rjimswa.dswa.cache.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\scopedcss\bundle\WebApiPtmHana.styles.css
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPt.78FF04CA.Up2Date
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\refint\WebApiPtmHana.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.genruntimeconfig.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana\obj\Debug\net6.0\ref\WebApiPtmHana.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\appsettings.Development.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\appsettings.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.staticwebassets.endpoints.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.exe
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.deps.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.runtimeconfig.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Azure.Core.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Azure.Identity.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\FluentScheduler.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Humanizer.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\INIFileParser.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Renci.SshNet.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\SshNet.Security.Cryptography.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.CodeDom.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Text.Json.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\Sap.Data.Hana.Core.v2.1.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.BLL.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\Interop.SAPbobsCOM.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.ResolveComReference.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfoInputs.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfo.cs
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.CoreCompileInputs.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cs
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\rjimswa.dswa.cache.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\scopedcss\bundle\WebApiPtmHana.styles.css
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.json.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.development.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\swae.build.ex.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPt.78FF04CA.Up2Date
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\refint\WebApiPtmHana.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.genruntimeconfig.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\ref\WebApiPtmHana.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.AssemblyReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\Interop.SAPbobsCOM.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.ResolveComReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana\obj\Debug\net6.0\WebApiPtmHana.MvcApplicationPartsAssemblyInfo.cache

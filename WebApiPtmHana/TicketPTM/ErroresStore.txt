@@ -1,0 +1,2 @@
+24/10/2023 17:45:00 - Ocurrio un error al enviar el reporte:Procedure or function 'DatosReporte' expects parameter '@Planta', which was not supplied. line: 41
+24/10/2023 17:45:03 - Ocurrio un error al enviar el reporte:Procedure or function 'DatosReporte' expects parameter '@Planta', which was not supplied. line: 41

@@ -1,0 +1,2891 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApiPtmHana",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Account/Login": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Account/LogOut": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Account/ValidateToken": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AcumuladoEmb/AddAcumuladoEmbarque": {
+      "post": {
+        "tags": [
+          "AcumuladoEmb"
+        ],
+        "parameters": [
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "familia",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "peso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/GetEmails": {
+      "get": {
+        "tags": [
+          "Email"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/GetEmailsMolinos": {
+      "get": {
+        "tags": [
+          "Email"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/sendmail": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/AddMailTxt": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "parameters": [
+          {
+            "name": "correo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/RemoveMailTxt": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "parameters": [
+          {
+            "name": "correo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Email/GetMailTxt": {
+      "get": {
+        "tags": [
+          "Email"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Estados/EstadoBascula": {
+      "post": {
+        "tags": [
+          "Estados"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModeloBascula"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModeloBascula"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModeloBascula"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Estados/EstadoSemaforo": {
+      "get": {
+        "tags": [
+          "Estados"
+        ],
+        "parameters": [
+          {
+            "name": "idbascula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Estados/ObtenerPesoBascula": {
+      "get": {
+        "tags": [
+          "Estados"
+        ],
+        "parameters": [
+          {
+            "name": "bascula",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Estados/AddBase64": {
+      "post": {
+        "tags": [
+          "Estados"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseImpresionModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseImpresionModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseImpresionModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Estados/GetBaseTicket": {
+      "get": {
+        "tags": [
+          "Estados"
+        ],
+        "parameters": [
+          {
+            "name": "idbascula",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Graficas/GraficasInfo": {
+      "get": {
+        "tags": [
+          "Graficas"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Graficas/UpdateObjetivosData": {
+      "get": {
+        "tags": [
+          "Graficas"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Sobrepeso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Scrap",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/GetAllHistorial": {
+      "get": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/DisableRegister": {
+      "post": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DesabilitarPtModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DesabilitarPtModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DesabilitarPtModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/GetHistoryRecordById": {
+      "get": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "parameters": [
+          {
+            "name": "idHistPesada",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/EditRegisterById": {
+      "post": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/GetBitacoraPesadas": {
+      "get": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "parameters": [
+          {
+            "name": "idHPesadas",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/CopyRegister": {
+      "post": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CopiaRegistroModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CopiaRegistroModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CopiaRegistroModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistorialPesadas/FilterHistorical": {
+      "get": {
+        "tags": [
+          "HistorialPesadas"
+        ],
+        "parameters": [
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idEstadoSap",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaInicio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "corte",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/GetTickets": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "numplanta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/GetTicketByLinea": {
+      "post": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/GetTicketById": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/GetPrintTicketById": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/getTicketTemplate": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/getTicketTemplateMolinos": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/getTicketTemplateScrap": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/UpdateTicketById": {
+      "post": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "idTicket",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "peso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pesoBascula",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "porcentaje",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "calidad",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pesotubo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tubos",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/AddNewTicket": {
+      "post": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InfoTickets/FilterTickets": {
+      "get": {
+        "tags": [
+          "InfoTickets"
+        ],
+        "parameters": [
+          {
+            "name": "folio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaInicio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/GetBitacoraLinie": {
+      "get": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "linie",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/AsignSkuToLinie": {
+      "post": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kgxhr",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordenFabricacion",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "folio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/CreateNewLinie": {
+      "post": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "idLinea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/DeleteLinea": {
+      "post": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "Linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/ValidateSkuByLinie": {
+      "post": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "idLinea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "itemcode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Linias/UnassignLinieAndTicket": {
+      "post": {
+        "tags": [
+          "Linias"
+        ],
+        "parameters": [
+          {
+            "name": "idLinea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProductTerminado/UpdateMaterialEmb": {
+      "post": {
+        "tags": [
+          "ProductTerminado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProductTerminado/GetLineas": {
+      "get": {
+        "tags": [
+          "ProductTerminado"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProductTerminado/GetPTByLinie": {
+      "get": {
+        "tags": [
+          "ProductTerminado"
+        ],
+        "parameters": [
+          {
+            "name": "numLinea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "corte",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtroDefault",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaInicioFiltro",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFinFiltro",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProductTerminado/FilterFinishedProduct": {
+      "get": {
+        "tags": [
+          "ProductTerminado"
+        ],
+        "parameters": [
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaInicio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "corte",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProductTerminado/FiltroScrapCorte": {
+      "get": {
+        "tags": [
+          "ProductTerminado"
+        ],
+        "parameters": [
+          {
+            "name": "fechaInicio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "corte",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PtmHana/GetLinesProduction": {
+      "get": {
+        "tags": [
+          "PtmHana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PtmHana/GetPVCScrap": {
+      "get": {
+        "tags": [
+          "PtmHana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PtmHana/GetInjectionScrap": {
+      "get": {
+        "tags": [
+          "PtmHana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PtmHana/GetFinishedProduct": {
+      "get": {
+        "tags": [
+          "PtmHana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PtmHana/SSHExample": {
+      "get": {
+        "tags": [
+          "PtmHana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ReporteProductoTerm/GetAllPt": {
+      "get": {
+        "tags": [
+          "ReporteProductoTerm"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proceso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sap/EnvioSap": {
+      "post": {
+        "tags": [
+          "Sap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioSapModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioSapModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioSapModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sap/GenerarXml": {
+      "get": {
+        "tags": [
+          "Sap"
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sap/GenerarXml2": {
+      "get": {
+        "tags": [
+          "Sap"
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sap/GetDocEntrys": {
+      "get": {
+        "tags": [
+          "Sap"
+        ],
+        "parameters": [
+          {
+            "name": "itemcode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "series",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetAllPT": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetPTbySku": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetFabricOrder": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "series",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetFabricOrderDetail": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "docentry",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetNewScaleItems": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/GetItemName": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "itemCode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/UpdateNwScaleItem": {
+      "post": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "itemcode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/ObtenerInfoLinea": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/ActualizarInfoLineas": {
+      "post": {
+        "tags": [
+          "SapPtm"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LineaData"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LineaData"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LineaData"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SapPtm/AddNewDataLine": {
+      "get": {
+        "tags": [
+          "SapPtm"
+        ],
+        "parameters": [
+          {
+            "name": "kgHora",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/SendToMills": {
+      "post": {
+        "tags": [
+          "Scrap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioMolinosModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioMolinosModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvioMolinosModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetAfterIdProduction": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "parameters": [
+          {
+            "name": "idProduccion",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/AddScrap": {
+      "post": {
+        "tags": [
+          "Scrap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetAllReciboScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetAllScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "parameters": [
+          {
+            "name": "planta",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/AddRemolido": {
+      "post": {
+        "tags": [
+          "Scrap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scrap"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetNextIdEnvioScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetNextIdScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/FilterScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "parameters": [
+          {
+            "name": "fechaInicio",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fechaFin",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/getPlantillaExcel": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/EditScrap": {
+      "post": {
+        "tags": [
+          "Scrap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarHitorialPesadas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Scrap/GetScrap": {
+      "get": {
+        "tags": [
+          "Scrap"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/GetAllSkuInfo": {
+      "get": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/SkuInfo": {
+      "get": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/AsignSkuToLinie": {
+      "post": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "linea",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "turno",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kgxhr",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/GetBitacoraLinie": {
+      "get": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "linie",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/ValidateWeight": {
+      "post": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "ItemCode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numTubos",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SkuInfo/ValidateWeight2": {
+      "post": {
+        "tags": [
+          "SkuInfo"
+        ],
+        "parameters": [
+          {
+            "name": "ItemCode",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "peso",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numTubos",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "planta",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Taras/UpdateTare": {
+      "post": {
+        "tags": [
+          "Taras"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelTareUpdate"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelTareUpdate"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelTareUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Taras/UpdateKgHora": {
+      "post": {
+        "tags": [
+          "Taras"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelKgHoraUpdate"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelKgHoraUpdate"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExcelKgHoraUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BaseImpresionModel": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CopiaRegistroModel": {
+        "type": "object",
+        "properties": {
+          "idHPesado": {
+            "type": "string",
+            "nullable": true
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Linea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pesoTotal": {
+            "type": "number",
+            "format": "float"
+          },
+          "numTubos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "atadoPT": {
+            "type": "number",
+            "format": "float"
+          },
+          "taraPT": {
+            "type": "number",
+            "format": "float"
+          },
+          "anilloPT": {
+            "type": "number",
+            "format": "float"
+          },
+          "flejePT": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DesabilitarPtModel": {
+        "type": "object",
+        "properties": {
+          "idHistPesada": {
+            "type": "string",
+            "nullable": true
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditarHitorialPesadas": {
+        "type": "object",
+        "properties": {
+          "idHistPesada": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSKU": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lineaPtH": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "pesoTotalPtH": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "numTubosPtH": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "atadoPTH": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "taraPTH": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "anilloPTH": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "flejePTH": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreTrabjador": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmailModel": {
+        "type": "object",
+        "properties": {
+          "tiporeporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "base64PDF": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EnvioMolinosModel": {
+        "type": "object",
+        "properties": {
+          "operadorEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoItemEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "pesoEM": {
+            "type": "number",
+            "format": "float"
+          },
+          "familiaEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "turnoEM": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comentariosEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "procesoEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidadEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaEnvioEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "linea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "planta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EnvioSapModel": {
+        "type": "object",
+        "properties": {
+          "idPesadas": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "preliminar": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExcelKgHoraUpdate": {
+        "type": "object",
+        "properties": {
+          "kgHoraInfo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExcelTareUpdate": {
+        "type": "object",
+        "properties": {
+          "tarasInfo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LineaData": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string",
+            "nullable": true
+          },
+          "planta": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kgHora": {
+            "type": "number",
+            "format": "double"
+          },
+          "linea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginModel": {
+        "type": "object",
+        "properties": {
+          "userEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ModeloBascula": {
+        "type": "object",
+        "properties": {
+          "idbascula": {
+            "type": "string",
+            "nullable": true
+          },
+          "peso": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Scrap": {
+        "type": "object",
+        "properties": {
+          "idEnvioScrap": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "operadorScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoItemScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "pesoScrap": {
+            "type": "number",
+            "format": "float"
+          },
+          "familiaScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "subFamiliaScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "turnoScrap": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "procesoScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidadScrap": {
+            "type": "string",
+            "nullable": true
+          },
+          "idRemolidoScrap": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "planta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateMaterialRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "multiploCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "multiploCat": {
+            "type": "string",
+            "nullable": true
+          },
+          "variable": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "minWeight": {
+            "type": "string",
+            "nullable": true
+          },
+          "flejeCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "anilloCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "maderaCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "arpillaCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "costalesCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarimaCant": {
+            "type": "string",
+            "nullable": true
+          },
+          "planta": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

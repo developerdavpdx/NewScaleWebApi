@@ -1,0 +1,1 @@
+8/3/2023 10:43:52 AM - Ocurrio un error al enviar el reporte:The process cannot access the file 'C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana\TicketPTM\CorreoEnvicado.txt' because it is being used by another process. line: 68

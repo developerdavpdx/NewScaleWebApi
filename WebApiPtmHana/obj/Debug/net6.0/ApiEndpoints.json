@@ -1,0 +1,1733 @@
+[
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "WebApiPtmHana.Models.AccountModel.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.AccountController",
+    "Method": "LogOut",
+    "RelativePath": "api/Account/LogOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.AccountController",
+    "Method": "ValidateToken",
+    "RelativePath": "api/Account/ValidateToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.AcumuladoEmbController",
+    "Method": "AddAcumuladoEmbarque",
+    "RelativePath": "api/AcumuladoEmb/AddAcumuladoEmbarque",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "familia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "peso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "AddMailTxt",
+    "RelativePath": "api/Email/AddMailTxt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "GetEmails",
+    "RelativePath": "api/Email/GetEmails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "GetEmailsMolinos",
+    "RelativePath": "api/Email/GetEmailsMolinos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "GetMailTxt",
+    "RelativePath": "api/Email/GetMailTxt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "RemoveMailTxt",
+    "RelativePath": "api/Email/RemoveMailTxt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.EmailController",
+    "Method": "EmailSender",
+    "RelativePath": "api/Email/sendmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "WebApiPtmHana.Models.Email.EmailModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.Estados",
+    "Method": "AddBase64",
+    "RelativePath": "api/Estados/AddBase64",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bases",
+        "Type": "WebApiPtmHana.Models.Estados.BaseImpresionModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.Estados",
+    "Method": "EstadoBascula",
+    "RelativePath": "api/Estados/EstadoBascula",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bascula",
+        "Type": "WebApiPtmHana.Models.Estados.ModeloBascula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.Estados",
+    "Method": "EstadosSemaforo",
+    "RelativePath": "api/Estados/EstadoSemaforo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idbascula",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.Estados",
+    "Method": "GetBaseTicket",
+    "RelativePath": "api/Estados/GetBaseTicket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idbascula",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.Estados",
+    "Method": "ObtenerPesoBascula",
+    "RelativePath": "api/Estados/ObtenerPesoBascula",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bascula",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.GraficasController",
+    "Method": "GetGraficasInfo",
+    "RelativePath": "api/Graficas/GraficasInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.GraficasController",
+    "Method": "UpdateObjetivosData",
+    "RelativePath": "api/Graficas/UpdateObjetivosData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sobrepeso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Scrap",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "CopyRecord",
+    "RelativePath": "api/HistorialPesadas/CopyRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modelRecord",
+        "Type": "WebApiPtmHana.Models.HistorialPesadasModel.CopiaRegistroModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "DisabledRecord",
+    "RelativePath": "api/HistorialPesadas/DisableRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebApiPtmHana.Models.HistorialPesadasModel.DesabilitarPtModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "EditRecordById",
+    "RelativePath": "api/HistorialPesadas/EditRegisterById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editPesada",
+        "Type": "WebApiPtmHana.Models.HistorialPesadasModel.EditarHitorialPesadas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "FilterHistorical",
+    "RelativePath": "api/HistorialPesadas/FilterHistorical",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idEstadoSap",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "corte",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "GetAllHistorial",
+    "RelativePath": "api/HistorialPesadas/GetAllHistorial",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "GetBitacoraPesadas",
+    "RelativePath": "api/HistorialPesadas/GetBitacoraPesadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idHPesadas",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.HistorialPesadasController",
+    "Method": "GetHistoryRecordById",
+    "RelativePath": "api/HistorialPesadas/GetHistoryRecordById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idHistPesada",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "AddNewTicket",
+    "RelativePath": "api/InfoTickets/AddNewTicket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "FilterTickets",
+    "RelativePath": "api/InfoTickets/FilterTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "GetPrintTicketById",
+    "RelativePath": "api/InfoTickets/GetPrintTicketById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "GetTicketById",
+    "RelativePath": "api/InfoTickets/GetTicketById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "GetTicketByLinea",
+    "RelativePath": "api/InfoTickets/GetTicketByLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "GetAllTickets",
+    "RelativePath": "api/InfoTickets/GetTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numplanta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "getTicketTemplate",
+    "RelativePath": "api/InfoTickets/getTicketTemplate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "getTicketTemplateMolinos",
+    "RelativePath": "api/InfoTickets/getTicketTemplateMolinos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "getTicketTemplateScrap",
+    "RelativePath": "api/InfoTickets/getTicketTemplateScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.InfoTicketsController",
+    "Method": "UpdateTicketById",
+    "RelativePath": "api/InfoTickets/UpdateTicketById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTicket",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "peso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pesoBascula",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "porcentaje",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "calidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pesotubo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tubos",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "AsignSkuToLinie",
+    "RelativePath": "api/Linias/AsignSkuToLinie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "kgxhr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ordenFabricacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "folio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "CreateNewLinie",
+    "RelativePath": "api/Linias/CreateNewLinie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLinea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "DeleteLinea",
+    "RelativePath": "api/Linias/DeleteLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "GetBitacoraLinie",
+    "RelativePath": "api/Linias/GetBitacoraLinie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "linie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "UnassignLinieAndTicket",
+    "RelativePath": "api/Linias/UnassignLinieAndTicket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLinea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Models.LiniasController",
+    "Method": "ValidateSkuByLinie",
+    "RelativePath": "api/Linias/ValidateSkuByLinie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLinea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "itemcode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ProductTerminadoController",
+    "Method": "FilterFinishedProduct",
+    "RelativePath": "api/ProductTerminado/FilterFinishedProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "corte",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ProductTerminadoController",
+    "Method": "FiltroScrapCorte",
+    "RelativePath": "api/ProductTerminado/FiltroScrapCorte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "corte",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ProductTerminadoController",
+    "Method": "GetLineas",
+    "RelativePath": "api/ProductTerminado/GetLineas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ProductTerminadoController",
+    "Method": "GetPTPvcByLinie",
+    "RelativePath": "api/ProductTerminado/GetPTByLinie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numLinea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "corte",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filtroDefault",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicioFiltro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFinFiltro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ProductTerminadoController",
+    "Method": "UpdateMaterialEmb",
+    "RelativePath": "api/ProductTerminado/UpdateMaterialEmb",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApiPtmHana.Controllers.ProductTerminadoController\u002BUpdateMaterialRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.PtmHana",
+    "Method": "GetFinishedProduct",
+    "RelativePath": "api/PtmHana/GetFinishedProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.PtmHana",
+    "Method": "GetInjectionScrap",
+    "RelativePath": "api/PtmHana/GetInjectionScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.PtmHana",
+    "Method": "GetLinesProduction",
+    "RelativePath": "api/PtmHana/GetLinesProduction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.PtmHana",
+    "Method": "GetPVCScrap",
+    "RelativePath": "api/PtmHana/GetPVCScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.PtmHana",
+    "Method": "ExampleSSH",
+    "RelativePath": "api/PtmHana/SSHExample",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ReporteProductoTermController",
+    "Method": "GetAllPt",
+    "RelativePath": "api/ReporteProductoTerm/GetAllPt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "proceso",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapController",
+    "Method": "EnvioSAP",
+    "RelativePath": "api/Sap/EnvioSap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modeloSAP",
+        "Type": "WebApiPtmHana.Models.EnvioSapModel.EnvioSapModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapController",
+    "Method": "GenerarXml",
+    "RelativePath": "api/Sap/GenerarXml",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "identificador",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapController",
+    "Method": "GenerarXml2",
+    "RelativePath": "api/Sap/GenerarXml2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "identificador",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapController",
+    "Method": "GetDocEntrys",
+    "RelativePath": "api/Sap/GetDocEntrys",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemcode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "series",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "UpdateDataLinea",
+    "RelativePath": "api/SapPtm/ActualizarInfoLineas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lineasData",
+        "Type": "System.Collections.Generic.List\u00601[[WebApiPtmHana.Models.LineaData, WebApiPtmHana, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "AddNewDataLine",
+    "RelativePath": "api/SapPtm/AddNewDataLine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kgHora",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetAllOwor",
+    "RelativePath": "api/SapPtm/GetAllPT",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetFabricOrder",
+    "RelativePath": "api/SapPtm/GetFabricOrder",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "series",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetFabricOrderDetail",
+    "RelativePath": "api/SapPtm/GetFabricOrderDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docentry",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetItemName",
+    "RelativePath": "api/SapPtm/GetItemName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetNewScaleItems",
+    "RelativePath": "api/SapPtm/GetNewScaleItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "GetSkuDetail",
+    "RelativePath": "api/SapPtm/GetPTbySku",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "ObtenerInfoLinea",
+    "RelativePath": "api/SapPtm/ObtenerInfoLinea",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SapPtmController",
+    "Method": "UpdateNwScaleItem",
+    "RelativePath": "api/SapPtm/UpdateNwScaleItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemcode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "AddRemolido",
+    "RelativePath": "api/Scrap/AddRemolido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scrap",
+        "Type": "WebApiPtmHana.Models.Scrap.Scrap",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "AddScrap",
+    "RelativePath": "api/Scrap/AddScrap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scrap",
+        "Type": "WebApiPtmHana.Models.Scrap.Scrap",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "EditScrap",
+    "RelativePath": "api/Scrap/EditScrap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editScrpt",
+        "Type": "WebApiPtmHana.Models.HistorialPesadasModel.EditarHitorialPesadas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "FliterScrap",
+    "RelativePath": "api/Scrap/FilterScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetAfterIdProduction",
+    "RelativePath": "api/Scrap/GetAfterIdProduction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProduccion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetAllReciboScrap",
+    "RelativePath": "api/Scrap/GetAllReciboScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetAllScrap",
+    "RelativePath": "api/Scrap/GetAllScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetNextIdEnvioScrap",
+    "RelativePath": "api/Scrap/GetNextIdEnvioScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetNextIdScrap",
+    "RelativePath": "api/Scrap/GetNextIdScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "getPlantillaExcel",
+    "RelativePath": "api/Scrap/getPlantillaExcel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "GetScrapById",
+    "RelativePath": "api/Scrap/GetScrap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.ScrapController",
+    "Method": "SendToMills",
+    "RelativePath": "api/Scrap/SendToMills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "molinos",
+        "Type": "WebApiPtmHana.Models.EnvioMolinos.EnvioMolinosModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "AsignSkuToLinie",
+    "RelativePath": "api/SkuInfo/AsignSkuToLinie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "linea",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "turno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "kgxhr",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "GetAllSkuInfo",
+    "RelativePath": "api/SkuInfo/GetAllSkuInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "GetBitacoraLinie",
+    "RelativePath": "api/SkuInfo/GetBitacoraLinie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "linie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "GetSkuInfo",
+    "RelativePath": "api/SkuInfo/SkuInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "ValidateWeight",
+    "RelativePath": "api/SkuInfo/ValidateWeight",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numTubos",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.SkuInfoController",
+    "Method": "ValidateWeight2",
+    "RelativePath": "api/SkuInfo/ValidateWeight2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "peso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numTubos",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "planta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.TarasController",
+    "Method": "UpdateTUpdateKgHora",
+    "RelativePath": "api/Taras/UpdateKgHora",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kgHoraData",
+        "Type": "WebApiPtmHana.Models.TareUpdate.ExcelKgHoraUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiPtmHana.Controllers.TarasController",
+    "Method": "UpdateTare",
+    "RelativePath": "api/Taras/UpdateTare",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taras",
+        "Type": "WebApiPtmHana.Models.TareUpdate.ExcelTareUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

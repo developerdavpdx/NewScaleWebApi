@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "WebApiPtmHana.Datos/1.0.0": {
+        "runtime": {
+          "WebApiPtmHana.Datos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebApiPtmHana.Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,91 @@
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.AssemblyReference.cache
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Documents\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.AssemblyReference.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.deps.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\bin\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\refint\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net6.0\ref\WebApiPtmHana.Datos.dll

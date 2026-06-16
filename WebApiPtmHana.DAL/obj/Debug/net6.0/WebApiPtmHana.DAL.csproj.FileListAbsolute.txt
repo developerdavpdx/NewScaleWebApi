@@ -1,0 +1,120 @@
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CopyComplete
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\usuario\Pictures\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CopyComplete
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\usuario\Documents\PTM\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanavPDx\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner\Desktop\PDX\WebApiPtmHanav\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\PTM\NewScaler\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.deps.json
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\bin\Debug\net6.0\WebApiPtmHana.Datos.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPt.C66E2696.Up2Date
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\refint\WebApiPtmHana.DAL.dll
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\WebApiPtmHana.DAL.pdb
+C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Debug\net6.0\ref\WebApiPtmHana.DAL.dll

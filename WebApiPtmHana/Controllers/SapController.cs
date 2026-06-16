@@ -1,0 +1,360 @@
+﻿using IniParser;
+using IniParser.Model;
+using MantenimientosPTM;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using PryPTM;
+using Sap.Data.Hana;
+using System.Data;
+using System.Xml;
+using WebApiPtmHana.BLL.Services.EnvioSapServ;
+using WebApiPtmHana.Models;
+using WebApiPtmHana.Models.EnvioSapModel;
+
+namespace WebApiPtmHana.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SapController : ControllerBase
+    {
+        private readonly ISapEnvio _sapEnvio;
+        private readonly IWebHostEnvironment _env;
+        private readonly string connectionString;
+        private readonly IConfiguration _configuration;
+        private readonly string prefijo;
+
+        private readonly csSendToSAP xmlSap;
+        
+
+        public SapController(ISapEnvio sapEnvio, IWebHostEnvironment env, IConfiguration configuration)
+        {
+            _sapEnvio = sapEnvio;
+            _env = env;
+            _configuration = configuration;
+            this.connectionString = configuration.GetConnectionString("DefaulConnection");
+            //Llamamos al prefijo para los stores
+            prefijo = configuration["StoredProcedurePrefix"];
+
+            // Instanciamos csSendToSAP pasándole IConfiguration para que lea desde appsettings.json
+            xmlSap = new csSendToSAP(configuration);
+        }
+
+        // --- nuevo método: obtiene BaseEntry (DocEntry) por DocNum (FolioPT)
+        private int GetBaseEntryByDocNum(int docNum)
+        {
+            try
+            {
+                using (HanaConnection connection = new HanaConnection(connectionString))
+                {
+                    connection.Open();
+                    using (HanaCommand command = new HanaCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = $"{prefijo}.SPPDX_OBTENER_BASEENTRY_OT";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("P_DOCNUM", HanaDbType.Integer).Value = docNum;
+
+                        using (HanaDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Devuelve DocEntry (BaseEntry)
+                                if (reader["BaseEntry"] != DBNull.Value)
+                                    return Convert.ToInt32(reader["BaseEntry"]);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Guarda el error para diagnóstico
+                xmlSap.InsertError("SapController.cs", "GetBaseEntryByDocNum", ex.Message);
+            }
+
+            // Si no existe o hay error, devuelve 0 (puedes cambiar comportamiento)
+            return 0;
+        }
+
+        //Peticion para registrar las lineas que se enviaran a SAP en SQL
+        [HttpPost]
+        [Route("EnvioSap")]
+        public async Task<IActionResult> EnvioSAP([FromBody] EnvioSapModel modeloSAP)
+        {
+            try
+            {
+                var response = await _sapEnvio.AddRecordToSendSAP(modeloSAP.idPesadas, modeloSAP.preliminar);
+
+
+                return StatusCode(StatusCodes.Status200OK, new { identificador = response });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { ex.Message });
+            }
+        }
+
+        //GENERAR XML DE RECIBO DE PRODUCCION PARA ENVIAR A SAP
+        [HttpGet]
+        [Route("GenerarXml")]
+        public async Task<IActionResult> GenerarXml([FromHeader] string identificador)
+        {
+            try
+            {
+                int identi = int.Parse(identificador);
+                var envSap = _sapEnvio.GetListToSend(identi);
+
+                // Se define la ruta y nombre del archivo XML a generar
+                string rutaArchivo = "C:\\Paradox\\PTM\\NWScale";
+
+                var almacen = _configuration["Almacen:WarehouseCode"];
+
+                // Se verifica si la ruta existe
+                if (!Directory.Exists(rutaArchivo))
+                {
+                    try
+                    {
+                        // Se intenta crear la ruta
+                        Directory.CreateDirectory(rutaArchivo);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"No se pudo crear la ruta '{rutaArchivo}': {ex.Message}");
+                    }
+                }
+
+                DateTime fechaActual = DateTime.Now;
+                string fechaformateada = fechaActual.ToString("yyyyMMdd");
+                XmlDocument xmlDocument = new XmlDocument();
+                XmlDeclaration xmlDeclaration = xmlDocument.CreateXmlDeclaration("1.0", "UTF-8", null);
+                xmlDocument.AppendChild(xmlDeclaration);
+
+                // Creamos el nodo raíz BOM
+                XmlElement bomElement = xmlDocument.CreateElement("BOM");
+                xmlDocument.AppendChild(bomElement);
+
+                // Creamos el nodo BO y lo añadimos como hijo del nodo BOM
+                XmlElement boElement = xmlDocument.CreateElement("BO");
+                bomElement.AppendChild(boElement);
+
+                // Creamos el nodo AdmInfo y lo añadimos como hijo del nodo BO
+                XmlElement admInfoElement = xmlDocument.CreateElement("AdmInfo");
+                boElement.AppendChild(admInfoElement);
+
+                // ( validar si es preliminar aquí)
+                XmlElement objectElement = xmlDocument.CreateElement("Object");
+                objectElement.InnerText = "59";
+                admInfoElement.AppendChild(objectElement);
+
+                // Creamos el nodo Version y lo añadimos como hijo del nodo AdmInfo
+                XmlElement versionElement = xmlDocument.CreateElement("Version");
+                versionElement.InnerText = "2";
+                admInfoElement.AppendChild(versionElement);
+
+                // Creamos el nodo Documents y lo añadimos como hijo del nodo BO
+                XmlElement documentsElement = xmlDocument.CreateElement("Documents");
+                boElement.AppendChild(documentsElement);
+
+                // Creamos el nodo row y lo añadimos como hijo del nodo Documents
+                XmlElement rowElement = xmlDocument.CreateElement("row");
+                documentsElement.AppendChild(rowElement);
+
+                // Creamos los nodos DocType, DocDate, DocDueDate, Comments y JournalMemo y los añadimos como hijos del nodo row
+                XmlElement docTypeElement = xmlDocument.CreateElement("DocType");
+                docTypeElement.InnerText = "dDocument_Items";
+                rowElement.AppendChild(docTypeElement);
+
+                XmlElement docDateElement = xmlDocument.CreateElement("DocDate");
+                docDateElement.InnerText = fechaformateada;
+                rowElement.AppendChild(docDateElement);
+
+                XmlElement referenceElement = xmlDocument.CreateElement("Reference1");
+                referenceElement.InnerText = "3593";
+                rowElement.AppendChild(referenceElement);
+
+                XmlElement docDueDateElement = xmlDocument.CreateElement("DocDueDate");
+                docDueDateElement.InnerText = fechaformateada;
+                rowElement.AppendChild(docDueDateElement);
+
+                XmlElement commentsElement = xmlDocument.CreateElement("Comments");
+                commentsElement.InnerText = "CREADO POR DI NW SCALE";
+                rowElement.AppendChild(commentsElement);
+
+                XmlElement journalMemoElement = xmlDocument.CreateElement("JournalMemo");
+                journalMemoElement.InnerText = "Recibo de producción";
+                rowElement.AppendChild(journalMemoElement);
+
+                // Creamos el nodo Document_Lines y lo añadimos como hijo del nodo BO
+                XmlElement documentLinesElement = xmlDocument.CreateElement("Document_Lines");
+                boElement.AppendChild(documentLinesElement);
+
+                HanaResponses hana = new HanaResponses();
+
+                XmlElement rowElement2 = xmlDocument.CreateElement("row");
+                documentLinesElement.AppendChild(rowElement2);
+
+                // Creamos los nodos LineNum, Quantity, WarehouseCode, AccountCode, BaseType y BaseEntry y los añadimos como hijos del nodo row
+                XmlElement lineNumElement = xmlDocument.CreateElement("LineNum");
+                lineNumElement.InnerText = "0";
+                rowElement2.AppendChild(lineNumElement);
+
+                XmlElement quantityElement = xmlDocument.CreateElement("Quantity");
+                quantityElement.InnerText = "23.000000";
+                //quantityElement.InnerText = "1.000000";
+                rowElement2.AppendChild(quantityElement);
+
+                XmlElement warehouseCodeElement = xmlDocument.CreateElement("WarehouseCode");
+                warehouseCodeElement.InnerText = almacen.ToString();
+                rowElement2.AppendChild(warehouseCodeElement);
+
+                XmlElement accountCodeElement = xmlDocument.CreateElement("AccountCode");
+                accountCodeElement.InnerText = "1101001026";
+                rowElement2.AppendChild(accountCodeElement);
+
+                XmlElement baseTypeElement = xmlDocument.CreateElement("BaseType");
+                baseTypeElement.InnerText = "202";
+                rowElement2.AppendChild(baseTypeElement);
+
+                XmlElement baseEntryElement = xmlDocument.CreateElement("BaseEntry");
+                baseEntryElement.InnerText = "3593";
+                rowElement2.AppendChild(baseEntryElement);
+
+
+                string nombrearchivo = "EN" + identificador + ".xml";
+                //string nombrearchivo = "xmlito.xml";
+                xmlDocument.Save(rutaArchivo + "\\" + nombrearchivo);
+
+                //GUARDAR EL REGISTRO DEL XML
+                var idxmlFile = xmlSap.SaveXmlFile(rutaArchivo + "\\" + nombrearchivo);
+                xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador,string.Empty);
+
+                // Se retorna un mensaje indicando que se ha generado el archivo XML
+                return Ok("Archivo XML generado correctamente");
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest("Error al generar archivo xml: " + ex);
+            }
+
+        }
+
+        /// <summary>
+        /// Realizamos la carga a SAP
+        /// </summary>
+        /// <param name="identificador"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GenerarXml2")]
+        public async Task<IActionResult> GenerarXml2([FromHeader] string identificador, [FromHeader] string Planta)
+        {
+            try
+            {
+                string rutaArchivo = "C:\\Paradox\\PTM\\PTMConnect\\SourcePath\\EN" + identificador+".xml";
+
+                DateTime fechaActual = DateTime.Now;
+                string fechaformateada = fechaActual.ToString("yyyy-MM-dd");
+                int identi = int.Parse(identificador);
+                var envSap = _sapEnvio.GetListToSend(identi);
+
+                var almacen = _configuration["Almacen:WarehouseCode"]; //almacen planta 1
+                var almacen2 = _configuration["Almacen:WarehouseCode2"]; //almacen planta 2
+                var series = _configuration["Almacen:Series"]; //serie planta 1
+                var series2 = _configuration["Almacen:Series2"]; //serie planta2
+
+                //Se actualizo el metodo a serviceLayer 
+                //Se adapta la informacion a JSON
+                var body = new
+                {
+                    DocType = "dDocument_Items",
+                    DocDate = fechaformateada,        // "yyyy-MM-dd"
+                    DocDueDate = fechaformateada,
+                    Comments = "CREADO POR SL NW SCALE",
+                    JournalMemo = "Recibo de producción",
+                    Series = Planta == "1" ? int.Parse(series) : int.Parse(series2),
+
+                    DocumentLines = envSap.Select((item, i) => new
+                    {
+                        LineNum = i,
+                        Quantity = item.HistorialPesadas.Tipo == "PT"
+                                            ? (double)item.HistorialPesadas.ProductoTerminado.NumTubos
+                                            : (double)item.HistorialPesadas.ScrapMolinos.Cantidad,
+                        WarehouseCode = Planta == "1" ? almacen : almacen2,
+                        BaseType = 202,
+                        // Obtiene BaseEntry (DocEntry) a partir de FolioPT ejecutando el stored en HANA
+                        BaseEntry = GetBaseEntryByDocNum(int.Parse(item.HistorialPesadas.ProductoTerminado.OrdenFabricacion))
+                    }).ToList()
+                };
+
+                string Request = JsonConvert.SerializeObject(body);
+
+                string nombrearchivo = "EN" + identificador + ".xml";
+                //guardamos en SAP
+                var idxmlFile = xmlSap.SaveXmlFile(rutaArchivo);
+                //Gruadamos en SQL
+               GlobalCommands.SapResponse responseAbx = await xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador, Request);
+
+                if (!responseAbx.IsError)
+                {
+                    return Ok("Archivo generado correctamente");
+                } else
+                {
+                    xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, responseAbx.Message.ToString(), "");
+                    return BadRequest("no se pudo generar el documento en sap: " + responseAbx.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                //guardamos la excepcion en "comentariosSAP" para poder visualizarla si el servidor tarda en responder
+                xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, ex.ToString(), "");
+                return BadRequest("Error al generar archivo: " + ex.ToString());
+            }
+        }
+
+        [HttpGet]
+        [Route("GetDocEntrys")]
+        public IActionResult GetDocEntrys([FromHeader] string itemcode, [FromHeader] string series)
+        {
+            try
+            {
+                HanaResponses hana = new HanaResponses();
+                using(HanaConnection connection = new HanaConnection(connectionString))
+                {
+                    connection.Open();
+                    using(HanaCommand command = new HanaCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = $"{prefijo}.SPPDX_OBTENERDOCENTRYABT";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("ItemCode", HanaDbType.NVarChar).Value = itemcode;
+                        command.Parameters.Add("Series", HanaDbType.NVarChar).Value = series;
+                        using (HanaDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                hana.Items = new DataTable();
+                                hana.Items.Load(reader);
+                                using (hana.Items)
+                                {
+                                    string jsonResponse = string.Empty;
+                                    jsonResponse = JsonConvert.SerializeObject(hana.Items);
+                                    var docEntrys = JsonConvert.DeserializeObject<List<BaseEntryInfo>>(jsonResponse);
+                                    return StatusCode(StatusCodes.Status200OK, new { jsonResponse });
+                                }
+                            } else
+                            {
+                                return StatusCode(StatusCodes.Status400BadRequest, new { response = "No existen ordenes de fabricacion abiertas" });
+                            }
+                        }
+                    }
+                }
+            } catch(Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { ex.Message });
+            }
+        }
+    }
+}

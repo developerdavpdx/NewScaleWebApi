@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+        
+.ticket {
+    font-size: 12px;
+    font-family: 'Times New Roman';
+}
+
+td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+td.columna1,
+th.columna1 {
+    width: 125px;
+    max-width: 125px;
+}
+
+td.columna2,
+th.columna2 {
+    width: 125px;
+    max-width: 125px;
+    word-break: break-all;
+}
+
+.centrado {
+    text-align: center;
+    align-content: center;
+}
+
+.ticket {
+    width: 250px;
+    max-width: 250px;
+    margin:auto; 
+}
+
+.img-ticket {
+    max-width: inherit;
+    width: inherit;
+} 
+
+
+@media print {
+    .oculto-impresion,
+    .oculto-impresion * {
+        display: none !important;
+    }
+
+    @page {
+    margin-top: 0;
+  }
+  #header {
+    display: none;
+  }
+
+  /* Ocultar el footer */
+  @page {
+    margin-bottom: 0;
+  }
+  #footer {
+    display: none;
+  }
+}
+
+
+       </style>
+
+    </head>
+    <body>
+
+        <input type="hidden" value="--idlinea" id="idlinea">
+        <div class="ticket">
+           <div style=" text-align: center;">
+               <img src="../../images/LogoNWScale2.png"
+                    alt="Logotipo" style="width: 150px; max-width: 150px; ">
+           </div>
+            
+            <p class="centrado " >
+            --fechayhora
+        </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="columna1">CONCEPTO</th>
+                        <th class="columna2">VALOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="columna1">ID TICKET:</td>
+                        <td class="columna1" id="idticket">--idticket</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">CÓDIGO ITEM:</td>
+                        <td class="columna1" id="itemSap">--selectitem</td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna1">TURNO:</td>
+                        <td class="columna1">--turno</td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna1">OPERADOR:</td>
+                        <td class="columna1">--operador</td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna1">PESO:</td>
+                        <td class="columna1" id="pesoTicket">--peso</td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna1">FAMILIA (SAP):</td>
+                        <td class="columna1" id="familiaSap">--familiasap</td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna1">FECHA Y HORA:</td>
+                        <td class="columna1" id="fechaMolinoTicket">--fechayhoramolino</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <p class="centrado" style="color: gray;">POWERED BY
+                <br><img src="../../images/Paradox1.png" style="width: 40%;"></p>
+        </div> 
+        <script>
+            let cerrar= true;
+            window.addEventListener('afterprint', function () { if(cerrar){window.close();} })
+
+            window.matchMedia('print').addListener(function() {
+                cerrar=false;
+
+             let idlinea = document.getElementById('idlinea').value;
+
+            var data = {
+                "linea": idlinea
+            }
+                        
+        </script>
+        
+    </body>
+</html>
