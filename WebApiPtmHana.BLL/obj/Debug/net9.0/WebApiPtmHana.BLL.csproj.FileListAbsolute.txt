@@ -15,3 +15,21 @@ C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Versio
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.BLL\obj\Debug\net9.0\refint\WebApiPtmHana.BLL.dll
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.pdb
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.BLL\obj\Debug\net9.0\ref\WebApiPtmHana.BLL.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.BLL.deps.json
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.BLL.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.BLL.pdb
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.DAL.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.Datos.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\bin\Debug\net9.0\WebApiPtmHana.Datos.pdb
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.csproj.AssemblyReference.cache
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.AssemblyInfoInputs.cache
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.AssemblyInfo.cs
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.csproj.CoreCompileInputs.cache
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.sourcelink.json
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPt.197FE814.Up2Date
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\refint\WebApiPtmHana.BLL.dll
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\WebApiPtmHana.BLL.pdb
+C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.BLL\obj\Debug\net9.0\ref\WebApiPtmHana.BLL.dll
