@@ -9,15 +9,3 @@ C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Versio
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net9.0\refint\WebApiPtmHana.Datos.dll
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.pdb
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.Datos\obj\Release\net9.0\ref\WebApiPtmHana.Datos.dll
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\bin\Release\net9.0\WebApiPtmHana.Datos.deps.json
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\bin\Release\net9.0\WebApiPtmHana.Datos.dll
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\bin\Release\net9.0\WebApiPtmHana.Datos.pdb
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.AssemblyInfoInputs.cache
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.AssemblyInfo.cs
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.csproj.CoreCompileInputs.cache
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.sourcelink.json
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.dll
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\refint\WebApiPtmHana.Datos.dll
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\WebApiPtmHana.Datos.pdb
-C:\Paradox\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.Datos\obj\Release\net9.0\ref\WebApiPtmHana.Datos.dll

@@ -1,5 +1,4 @@
-using System;
-using System.IO;
+using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
 using Sap.Data.Hana;
 using WebApiPtmHana.BLL.Services.AcumuladoEmbServ;
@@ -31,67 +30,20 @@ using WebApiPtmHana.DAL.DataContext.Repositories.TicketsRepo;
 using WebApiPtmHana.DAL.DataContext.Repositories.UserTokensRepo;
 using WebApiPtmHana.Datos;
 using Serilog;
-using Serilog.Debugging;
-using Serilog.Sinks.Map;
 using WebApiPtmHana.Shedule;
 using WebApiPTMTest.Models;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Directorio de logs dentro del ContentRoot (publicado en IIS)
-var logsDir = Path.Combine(builder.Environment.ContentRootPath, "Logs");
-Directory.CreateDirectory(logsDir);
-
-// Subcarpeta específica para RecibosProduccion
-var recibosDir = Path.Combine(logsDir, "RecibosProduccion");
-Directory.CreateDirectory(recibosDir);
-
-// SelfLog para errores internos de Serilog (útil en IIS)
-SelfLog.Enable(msg => File.AppendAllText(Path.Combine(logsDir, "serilog-selflog.txt"), DateTime.UtcNow + " " + msg + Environment.NewLine));
-
-// Configuración Serilog
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
-    .Enrich.FromLogContext()
-    // Archivo de arranque con fecha exacta (ej: NewScaleWebApi20260616.txt)
-    .WriteTo.File(Path.Combine(logsDir, $"NewScaleWebApi{DateTime.UtcNow:yyyyMMdd}.txt"),
-                  rollingInterval: RollingInterval.Infinite,
-                  retainedFileCountLimit: null,
-                  shared: true)
-    // Archivo general por módulo en Logs si no es SAP
-    .WriteTo.Map(
-        "Module",
-        "general",
-        (module, wt) =>
-        {
-            if (string.Equals(module, "SAP", StringComparison.OrdinalIgnoreCase))
-            {
-                // Si Module == SAP, escribir en la subcarpeta RecibosProduccion con fecha en el nombre
-                wt.File(Path.Combine(recibosDir, $"RecibosProduccion-{DateTime.UtcNow:yyyyMMdd}.txt"),
-                        rollingInterval: RollingInterval.Day,
-                        retainedFileCountLimit: 60,
-                        shared: true);
-            }
-            else
-            {
-                wt.File(Path.Combine(logsDir, $"{module}-log-.txt"),
-                        rollingInterval: RollingInterval.Day,
-                        retainedFileCountLimit: 30,
-                        shared: true);
-            }
-        })
-    // También mantener un archivo general diario en Logs
-    .WriteTo.File(Path.Combine(logsDir, "general-log-.txt"),
-                  rollingInterval: RollingInterval.Day,
-                  retainedFileCountLimit: 30,
-                  shared: true)
+    .WriteTo.File(
+        "Logs/log-.txt",
+        rollingInterval: RollingInterval.Day,
+        retainedFileCountLimit: 30,
+        shared: true)
     .CreateLogger();
 
+var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
-
-// Escribe línea de arranque que identifique la aplicación y la fecha en NewScaleWebApiYYYYMMDD.txt
-Log.Information("WebApi Transaciones New Scale - {StartedAt}", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"));
-
 var connectionStringSQL = builder.Configuration.GetConnectionString("SQLConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

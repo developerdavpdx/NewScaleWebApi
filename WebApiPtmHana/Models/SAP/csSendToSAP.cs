@@ -48,8 +48,8 @@ namespace PryPTM
         public string EmailError;
 
         Company vCmp;
-
-        public async Task<GlobalCommands.SapResponse> ReciProdAsync(string sFile, string sIdDBFile, string identificador, string Request)
+        
+        public async Task<GlobalCommands.SapResponse> ReciProdAsync(string sFile, string sIdDBFile, string identificador,string Request)
         {
             var responseAbx = new GlobalCommands.SapResponse { IsError = true };
 
@@ -57,8 +57,13 @@ namespace PryPTM
             {
                 Asignar();
 
-                Log.ForContext("Module", "SAP")
-                    .Information("INICIO Goods Receipt - {Request}", Request);
+                Log.Information("═══════════════════════════════════════════════════");
+
+                Log.Information(
+                    "INICIO Goods Receipt - {Request}",
+                    Request);
+
+                Log.Information("═══════════════════════════════════════════════════");
 
                 string XmlFile = @"C:\Paradox\PTM\PTMConnect\SourcePath\" + sFile;
 
@@ -66,7 +71,7 @@ namespace PryPTM
                 Log.Information($"🔐 Iniciando sesión en SAP Service Layer...");
                 var loginResult = await LoginService.LoginAsyncHttpClient();
 
-
+               
                 Log.Information($"📤 Body armado correctamente");
                 Log.Debug($"📤 JSON: {Request}");
 
@@ -100,7 +105,6 @@ namespace PryPTM
                     //SendMessageSAP("Recibo de Produccion", responseAbx.DocEntry, responseAbx.DocNum, sFile, sIdDBFile, "59");
                 }
                 else
-
                 {
                     try
                     {
@@ -112,21 +116,19 @@ namespace PryPTM
                         responseAbx.DocEntry = string.Empty;
                         responseAbx.Message = $"No fue posible generar recibo de producción, Error SAP: {errorCode} / {errorValue}";
                     }
-                    catch (Exception ex)
+                    catch
                     {
-                        {
-                            // Si no se puede parsear, mostrar el raw
-                            responseAbx.IsError = true;
-                            responseAbx.DocNum = string.Empty;
-                            responseAbx.DocEntry = string.Empty;
-                            responseAbx.Message = $"No fue posible generar recibo de producción, Error SAP ({(int)response.StatusCode}): {result}";
-                        }
-
-                        Log.ForContext("Module", "SAP")
-                            .Error($"Error al crear Purchase Request — StatusCode: {(int)response.StatusCode} : {responseAbx.Message}");
-                        //Actualiza a nivel linea en base de datos SQL Historial Pesadas
-                        ActualizaTablaSQLHP(identificador, 3, responseAbx.Message, "");
+                        // Si no se puede parsear, mostrar el raw
+                        responseAbx.IsError = true;
+                        responseAbx.DocNum = string.Empty;
+                        responseAbx.DocEntry = string.Empty;
+                        responseAbx.Message = $"No fue posible generar recibo de producción, Error SAP ({(int)response.StatusCode}): {result}";
                     }
+
+                    Log.Error($"❌ Error al crear Purchase Request — StatusCode: {(int)response.StatusCode}");
+                    Log.Error($"❌ Detalle: {responseAbx.Message}");
+                    //Actualiza a nivel linea en base de datos SQL Historial Pesadas
+                    ActualizaTablaSQLHP(identificador, 3, responseAbx.Message, "");
                 }
                 //Documents oJE;
                 //vCmp = new Company();
@@ -192,7 +194,7 @@ namespace PryPTM
                 ActualizaTablaSQLHP(identificador, 3, ex.Message, "");
                 UpdateXMLStatus(sIdDBFile, "", ex.Message, "Error");
                 InsertError(sFile, "csSendToSAP.ReciProd", ex.Message);
-                if (vCmp.Connected)
+                if(vCmp.Connected)
                 {
                     vCmp.Disconnect();
                 }
@@ -235,7 +237,7 @@ namespace PryPTM
                 sqls[1] = new HanaParameter("@vDocEntry", Convert.ToInt32(sDocEntry));
 
                 // CREO LA CONEXION
-                using (HanaConnection myConnection = new HanaConnection(hanaconnectionString))
+                using(HanaConnection myConnection = new HanaConnection(hanaconnectionString))
                 {
                     if (myConnection.State == ConnectionState.Closed)
                     {
@@ -283,7 +285,7 @@ namespace PryPTM
             {
                 oCmpSrv = vCmp.GetCompanyService();
 
-                oMessageService = (MessagesService)oCmpSrv.GetBusinessService(ServiceTypes.MessagesService);
+                oMessageService = (MessagesService) oCmpSrv.GetBusinessService(ServiceTypes.MessagesService);
                 oMessage = ((Message)(oMessageService.GetDataInterface(MessagesServiceDataInterfaces.msdiMessage)));
 
                 oMessage.Subject = "(PTM) " + sDocType.ToUpper() + " - IMPORTADO";
@@ -340,8 +342,8 @@ namespace PryPTM
 
             try
             {
-
-                using (HanaConnection conn = new HanaConnection(hanaconnectionString))
+               
+                using(HanaConnection conn = new HanaConnection(hanaconnectionString))
                 {
                     if (conn.State == ConnectionState.Closed)
                     {
@@ -374,7 +376,7 @@ namespace PryPTM
                                     case "EmailError": EmailError = myDtTbl.Rows[numRow]["Valor"].ToString(); break;
                                 }
                             }
-                            if (conn.State == ConnectionState.Open)
+                            if(conn.State == ConnectionState.Open)
                             {
                                 conn.Close();
                             }
@@ -417,7 +419,7 @@ namespace PryPTM
                 sqls[2] = new HanaParameter("@vResult", sResult);
                 sqls[3] = new HanaParameter("@vStatus", sStatus);
 
-                using (HanaConnection conn = new HanaConnection(hanaconnectionString))
+                using(HanaConnection conn = new HanaConnection(hanaconnectionString))
                 {
                     if (conn.State == ConnectionState.Closed)
                     {
@@ -454,7 +456,7 @@ namespace PryPTM
                 sqls[2] = new HanaParameter("@vMessage", sMessage);
 
                 // CREO LA CONEXION
-                using (HanaConnection conn = new HanaConnection(hanaconnectionString))
+                using(HanaConnection conn = new HanaConnection(hanaconnectionString))
                 {
                     if (conn.State == ConnectionState.Closed)
                     {
@@ -477,7 +479,7 @@ namespace PryPTM
             }
             catch (HanaException ex)
             {
-
+                
             }
         }
 
@@ -548,7 +550,7 @@ namespace PryPTM
                 sqls[0] = new HanaParameter("@vXmlFileName", sXmlFileName);
 
                 // CREO LA CONEXION
-                using (HanaConnection conn = new HanaConnection(hanaconnectionString))
+                using(HanaConnection conn = new HanaConnection(hanaconnectionString))
                 {
                     if (conn.State == ConnectionState.Closed)
                     {
@@ -611,8 +613,7 @@ namespace PryPTM
                         command.ExecuteNonQuery();
                     }
                 }
-            }
-            catch (Exception ex)
+            } catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }

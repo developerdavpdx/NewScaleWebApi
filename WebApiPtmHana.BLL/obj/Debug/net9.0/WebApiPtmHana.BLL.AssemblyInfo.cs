@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApiPtmHana.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b8aa9e7d63a42afda94332bfba52584f668c16d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiPtmHana.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiPtmHana.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
