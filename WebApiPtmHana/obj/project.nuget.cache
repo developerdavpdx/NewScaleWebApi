@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gVTF5NBaojY=",
+  "dgSpecHash": "Is0BlCFMNy4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+  "projectFilePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\partner2\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\partner2\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -109,12 +109,36 @@
   ],
   "logs": [
     {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "El paquete \"SSH.NET\" 2020.0.2 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-mggc-4xg6-vcxf",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "libraryId": "SSH.NET",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "El paquete \"SSH.NET\" 2020.0.2 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-q939-rpr3-3284",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "libraryId": "SSH.NET",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "message": "El paquete \"ini-parser 2.5.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "libraryId": "ini-parser",
       "targetGraphs": [
         "net9.0"
@@ -124,9 +148,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "El paquete \"Microsoft.AspNet.Razor 3.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "libraryId": "Microsoft.AspNet.Razor",
       "targetGraphs": [
         "net9.0"
@@ -136,9 +160,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "El paquete \"Microsoft.AspNet.WebPages 3.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "libraryId": "Microsoft.AspNet.WebPages",
       "targetGraphs": [
         "net9.0"
@@ -148,9 +172,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "El paquete \"Microsoft.Web.Infrastructure 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "projectPath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana\\WebApiPtmHana.csproj",
+      "filePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana\\WebApiPtmHana.csproj",
       "libraryId": "Microsoft.Web.Infrastructure",
       "targetGraphs": [
         "net9.0"

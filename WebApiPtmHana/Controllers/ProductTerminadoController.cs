@@ -503,12 +503,12 @@ namespace WebApiPtmHana.Controllers
                     switch (corte.ToString())
                     {
                         case "1":
-                            fechaInicio = $"{fechaInicio} 05:45:01";
-                            fechaFin = $"{fechaInicio.Replace("05:45:01", "")} 17:45:00";
+                            fechaInicio = $"{fechaInicio} {_configuration["HorariosScrap:HoraInicioCorte1"]}";
+                            fechaFin = $"{fechaInicio.Replace(_configuration["HorariosScrap:HoraInicioCorte1"], "")} {_configuration["HorariosScrap:HoraFinCorte1"]}";
                             break;
                         case "2":
-                            fechaInicio = $"{fechaInicio} 17:45:01";
-                            fechaFin = $"{DateTime.Parse(fechaInicio).AddDays(1).ToString("yyyy/MM/dd")} 05:45:00";
+                            fechaInicio = $"{fechaInicio} {_configuration["HorariosScrap:HoraInicioCorte2"]}";
+                            fechaFin = $"{DateTime.Parse(fechaInicio).AddDays(1).ToString("yyyy/MM/dd")} {_configuration["HorariosScrap:HoraFinCorte1"]}";
                             break;
                     };
                 }

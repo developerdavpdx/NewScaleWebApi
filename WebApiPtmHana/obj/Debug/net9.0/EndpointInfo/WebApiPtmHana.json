@@ -1550,6 +1550,27 @@
         }
       }
     },
+    "/api/Sap/GenerarXml": {
+      "get": {
+        "tags": [
+          "Sap"
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Sap/EnvioSap": {
       "post": {
         "tags": [
@@ -1574,27 +1595,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Sap/GenerarXml": {
-      "get": {
-        "tags": [
-          "Sap"
-        ],
-        "parameters": [
-          {
-            "name": "identificador",
-            "in": "header",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"

@@ -11,41 +11,41 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.EnvioSapRepo
     public class EnvioSapRepositorie : IGenericRepoEnvioSap<EnvioSAP>
     {
         private readonly ApplicationDbContext _context;
+        
 
         public EnvioSapRepositorie(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        private static readonly object _idLock = new object();
+
         public async Task<int> AddToSendToSap(int[] idHistorialPesadas, int preliminar)
         {
-            int idFileXML = 1;
-            var envioSap = _context.EnvioSAP.ToList();
-            bool Exist = false;
+            int idFileXML;
 
-            if (envioSap.Count() != 0)
+            lock (_idLock)
             {
-                var lastRecord = envioSap.OrderByDescending(x => x.Id).FirstOrDefault();
-                idFileXML = lastRecord.IdentEnvioSAP + 1;
+                var lastRecord = _context.EnvioSAP
+                    .OrderByDescending(x => x.Id)
+                    .FirstOrDefault();
+                idFileXML = lastRecord != null ? lastRecord.IdentEnvioSAP + 1 : 1;
             }
-            //Enviar todas las ordenes de fabricacion pendientes de generar
+
             foreach (var item in idHistorialPesadas)
             {
-                //Llenar tabla de envios a sap
                 EnvioSAP sap = new EnvioSAP()
                 {
                     IdentEnvioSAP = idFileXML,
-                    IdHistPesada = item, //ID DE HISTORIAL PESADA
+                    IdHistPesada = item,
                     IsPrelim = preliminar
                 };
-
                 await _context.AddAsync(sap);
             }
 
             await _context.SaveChangesAsync();
-            var envioSAPIdenti = _context.EnvioSAP.Where(x => x.IdentEnvioSAP == idFileXML).FirstOrDefault(); 
-            
-            return envioSAPIdenti.IdentEnvioSAP;
+
+            return idFileXML;
         }
 
         public List<EnvioSAP> GetSapListByIdentifier(int identifier)

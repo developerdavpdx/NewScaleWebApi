@@ -26,7 +26,10 @@ namespace WebApiPtmHana.Controllers
         private readonly string prefijo;
 
         private readonly csSendToSAP xmlSap;
-        
+
+        private readonly ILogger<SapController> _logger; // <-- AGREGADO
+
+
 
         public SapController(ISapEnvio sapEnvio, IWebHostEnvironment env, IConfiguration configuration)
         {
@@ -76,25 +79,6 @@ namespace WebApiPtmHana.Controllers
 
             // Si no existe o hay error, devuelve 0 (puedes cambiar comportamiento)
             return 0;
-        }
-
-        //Peticion para registrar las lineas que se enviaran a SAP en SQL
-        [HttpPost]
-        [Route("EnvioSap")]
-        public async Task<IActionResult> EnvioSAP([FromBody] EnvioSapModel modeloSAP)
-        {
-            try
-            {
-                var response = await _sapEnvio.AddRecordToSendSAP(modeloSAP.idPesadas, modeloSAP.preliminar);
-
-
-                return StatusCode(StatusCodes.Status200OK, new { identificador = response });
-
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { ex.Message });
-            }
         }
 
         //GENERAR XML DE RECIBO DE PRODUCCION PARA ENVIAR A SAP
@@ -242,73 +226,106 @@ namespace WebApiPtmHana.Controllers
 
         }
 
-        /// <summary>
-        /// Realizamos la carga a SAP
-        /// </summary>
-        /// <param name="identificador"></param>
-        /// <returns></returns>
+        [HttpPost]
+        [Route("EnvioSap")]
+        public async Task<IActionResult> EnvioSAP([FromBody] EnvioSapModel modeloSAP)
+        {
+            _logger.LogInformation("EnvioSAP | Inicio. Pesadas: {@IdPesadas} | Preliminar: {Preliminar}",
+                modeloSAP.idPesadas, modeloSAP.preliminar);
+            try
+            {
+                var response = await _sapEnvio.AddRecordToSendSAP(modeloSAP.idPesadas, modeloSAP.preliminar);
+                _logger.LogInformation("EnvioSAP | Lote creado correctamente. Identificador: {Identificador}", response);
+                return StatusCode(StatusCodes.Status200OK, new { identificador = response });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "EnvioSAP | Error al registrar pesadas. Pesadas: {@IdPesadas}", modeloSAP.idPesadas);
+                return StatusCode(StatusCodes.Status500InternalServerError, new { ex.Message });
+            }
+        }
+
         [HttpGet]
         [Route("GenerarXml2")]
         public async Task<IActionResult> GenerarXml2([FromHeader] string identificador, [FromHeader] string Planta)
         {
+            _logger.LogInformation("GenerarXml2 | Inicio. Identificador: {Identificador} | Planta: {Planta}", identificador, Planta);
             try
             {
-                string rutaArchivo = "C:\\Paradox\\PTM\\PTMConnect\\SourcePath\\EN" + identificador+".xml";
-
+                string rutaArchivo = "C:\\Paradox\\PTM\\PTMConnect\\SourcePath\\EN" + identificador + ".xml";
                 DateTime fechaActual = DateTime.Now;
                 string fechaformateada = fechaActual.ToString("yyyy-MM-dd");
                 int identi = int.Parse(identificador);
-                var envSap = _sapEnvio.GetListToSend(identi);
 
-                var almacen = _configuration["Almacen:WarehouseCode"]; //almacen planta 1
-                var almacen2 = _configuration["Almacen:WarehouseCode2"]; //almacen planta 2
-                var series = _configuration["Almacen:Series"]; //serie planta 1
-                var series2 = _configuration["Almacen:Series2"]; //serie planta2
+                var envSap = _sapEnvio.GetListToSend(identi)
+                    .Where(x => x.HistorialPesadas.ProductoTerminado != null
+                             && x.HistorialPesadas.ProductoTerminado.Planta.ToString() == Planta)
+                    .ToList();
 
-                //Se actualizo el metodo a serviceLayer 
-                //Se adapta la informacion a JSON
+                _logger.LogInformation("GenerarXml2 | Registros filtrados para Planta {Planta}: {Count}", Planta, envSap.Count);
+
+                if (!envSap.Any())
+                {
+                    _logger.LogWarning("GenerarXml2 | Sin registros para Identificador: {Identificador} | Planta: {Planta}", identificador, Planta);
+                    return BadRequest("No hay registros para la planta indicada.");
+                }
+
+                var almacen = _configuration["Almacen:WarehouseCode"];
+                var almacen2 = _configuration["Almacen:WarehouseCode2"];
+                var series = _configuration["Almacen:Series"];
+                var series2 = _configuration["Almacen:Series2"];
+
                 var body = new
                 {
                     DocType = "dDocument_Items",
-                    DocDate = fechaformateada,        // "yyyy-MM-dd"
+                    DocDate = fechaformateada,
                     DocDueDate = fechaformateada,
                     Comments = "CREADO POR SL NW SCALE",
                     JournalMemo = "Recibo de producción",
                     Series = Planta == "1" ? int.Parse(series) : int.Parse(series2),
-
-                    DocumentLines = envSap.Select((item, i) => new
+                    DocumentLines = envSap.Select((item, i) =>
                     {
-                        LineNum = i,
-                        Quantity = item.HistorialPesadas.Tipo == "PT"
-                                            ? (double)item.HistorialPesadas.ProductoTerminado.NumTubos
-                                            : (double)item.HistorialPesadas.ScrapMolinos.Cantidad,
-                        WarehouseCode = Planta == "1" ? almacen : almacen2,
-                        BaseType = 202,
-                        // Obtiene BaseEntry (DocEntry) a partir de FolioPT ejecutando el stored en HANA
-                        BaseEntry = GetBaseEntryByDocNum(int.Parse(item.HistorialPesadas.ProductoTerminado.OrdenFabricacion))
+                        int ordenFab = int.Parse(item.HistorialPesadas.ProductoTerminado.OrdenFabricacion);
+                        int baseEntry = GetBaseEntryByDocNum(ordenFab);
+                        _logger.LogInformation("GenerarXml2 | Linea {LineNum} | OrdenFabricacion: {OrdenFab} | BaseEntry: {BaseEntry}",
+                            i, ordenFab, baseEntry);
+                        return new
+                        {
+                            LineNum = i,
+                            Quantity = item.HistorialPesadas.Tipo == "PT"
+                                ? (double)item.HistorialPesadas.ProductoTerminado.NumTubos
+                                : (double)item.HistorialPesadas.ScrapMolinos.Cantidad,
+                            WarehouseCode = Planta == "1" ? almacen : almacen2,
+                            BaseType = 202,
+                            BaseEntry = baseEntry
+                        };
                     }).ToList()
                 };
 
                 string Request = JsonConvert.SerializeObject(body);
+                _logger.LogInformation("GenerarXml2 | JSON armado: {Json}", Request);
 
                 string nombrearchivo = "EN" + identificador + ".xml";
-                //guardamos en SAP
                 var idxmlFile = xmlSap.SaveXmlFile(rutaArchivo);
-                //Gruadamos en SQL
-               GlobalCommands.SapResponse responseAbx = await xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador, Request);
+                _logger.LogInformation("GenerarXml2 | Archivo guardado. IdXmlFile: {IdXmlFile}", idxmlFile);
+
+                GlobalCommands.SapResponse responseAbx = await xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador, Request);
 
                 if (!responseAbx.IsError)
                 {
+                    _logger.LogInformation("GenerarXml2 | SAP aceptó el documento. Archivo: {Archivo}", nombrearchivo);
                     return Ok("Archivo generado correctamente");
-                } else
+                }
+                else
                 {
+                    _logger.LogError("GenerarXml2 | SAP rechazó el documento. Mensaje: {Mensaje}", responseAbx.Message);
                     xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, responseAbx.Message.ToString(), "");
                     return BadRequest("no se pudo generar el documento en sap: " + responseAbx.Message);
                 }
             }
             catch (Exception ex)
             {
-                //guardamos la excepcion en "comentariosSAP" para poder visualizarla si el servidor tarda en responder
+                _logger.LogError(ex, "GenerarXml2 | Excepción. Identificador: {Identificador} | Planta: {Planta}", identificador, Planta);
                 xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, ex.ToString(), "");
                 return BadRequest("Error al generar archivo: " + ex.ToString());
             }

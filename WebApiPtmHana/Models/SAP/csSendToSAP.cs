@@ -202,6 +202,7 @@ namespace PryPTM
                 responseAbx.DocNum = string.Empty;
                 responseAbx.DocEntry = string.Empty;
                 responseAbx.Message = $"No fue posible generar recibo de producción, Error SAP ({ex.Message.ToString()})";
+                Log.Error(ex, "❌ Excepción en ReciProdAsync — Identificador: {Identificador} | Archivo: {Archivo}", identificador, sFile);
                 return responseAbx;
             }
 

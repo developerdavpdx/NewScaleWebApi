@@ -1,4 +1,4 @@
-using FluentScheduler;
+﻿using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
 using Sap.Data.Hana;
 using WebApiPtmHana.BLL.Services.AcumuladoEmbServ;
@@ -36,10 +36,12 @@ using WebApiPTMTest.Models;
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.File(
-        "Logs/log-.txt",
+        "C:\\Paradox\\PTM\\Logs\\log-.txt",
         rollingInterval: RollingInterval.Day,
         retainedFileCountLimit: 30,
-        shared: true)
+        shared: true,
+        outputTemplate: "═══════════════════════════════════════{NewLine}{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}]{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"
+    )
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);

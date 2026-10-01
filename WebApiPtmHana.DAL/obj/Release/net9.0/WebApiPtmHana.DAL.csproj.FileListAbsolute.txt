@@ -13,3 +13,19 @@ C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Versio
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Release\net9.0\refint\WebApiPtmHana.DAL.dll
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.pdb
 C:\Users\partner2\Desktop\PDXDevelopmentPTMNewScale\WebApiPtmHana Current Version\WebApiPtmHana.DAL\obj\Release\net9.0\ref\WebApiPtmHana.DAL.dll
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\bin\Release\net9.0\WebApiPtmHana.DAL.deps.json
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\bin\Release\net9.0\WebApiPtmHana.DAL.dll
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\bin\Release\net9.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\bin\Release\net9.0\WebApiPtmHana.Datos.dll
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\bin\Release\net9.0\WebApiPtmHana.Datos.pdb
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.csproj.AssemblyReference.cache
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.AssemblyInfoInputs.cache
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.AssemblyInfo.cs
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.csproj.CoreCompileInputs.cache
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.sourcelink.json
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPt.C66E2696.Up2Date
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.dll
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\refint\WebApiPtmHana.DAL.dll
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\WebApiPtmHana.DAL.pdb
+C:\Paradox\DEVELOPMENT\NEWSCALEWEBAPI\NewScaleWebApi\WebApiPtmHana.DAL\obj\Release\net9.0\ref\WebApiPtmHana.DAL.dll

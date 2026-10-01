@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mC5KIgumXiU=",
+  "dgSpecHash": "jD33iy6Nfas=",
   "success": true,
-  "projectFilePath": "C:\\Users\\partner2\\Desktop\\PDXDevelopmentPTMNewScale\\WebApiPtmHana Current Version\\WebApiPtmHana.BLL\\WebApiPtmHana.BLL.csproj",
+  "projectFilePath": "C:\\Paradox\\DEVELOPMENT\\NEWSCALEWEBAPI\\NewScaleWebApi\\WebApiPtmHana.BLL\\WebApiPtmHana.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\partner2\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\partner2\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

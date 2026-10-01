@@ -31,12 +31,7 @@ namespace WebApiPtmHana.Controllers
         }
 
 
-        /// <summary>
-        /// obtenemos los totales default para inyeccion o ppvc
-        /// </summary>
-        /// <param name="planta"></param>
-        /// <param name="proceso"></param>
-        /// <returns></returns>
+        //Obtener producto terminado PVC PLANTA 1
         [HttpGet]
         [Route("GetAllPt")]
         public IActionResult GetAllPt([FromHeader] string planta, [FromHeader] string proceso)
