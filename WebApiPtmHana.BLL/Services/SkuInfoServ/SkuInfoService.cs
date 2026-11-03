@@ -35,9 +35,9 @@ namespace WebApiPtmHana.BLL.Services.SkuInfoServ
             return await _repositorie.ValidSkuInfos(int.Parse(sku));
         }
 
-        public async Task<bool> UpdateSkuById(string id, int  MultiploCant, string MultiploCat, float Variable, string itemName, float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario)
+        public async Task<bool> UpdateSkuById(string id, int  MultiploCant, string MultiploCat, float Variable, string itemName, float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario, string proceso)
         {
-            return await _repositorie.UpdateById(id, MultiploCant, MultiploCat, Variable, itemName, minWeight, flejeCant, anilloCant, maderaCant, arpillaCant, costalesCant, tarimaCant, planta, usuario);
+            return await _repositorie.UpdateById(id, MultiploCant, MultiploCat, Variable, itemName, minWeight, flejeCant, anilloCant, maderaCant, arpillaCant, costalesCant, tarimaCant, planta, usuario, proceso);
         }
     }
 }

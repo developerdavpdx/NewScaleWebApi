@@ -21,7 +21,7 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.LineasRepo
         {
             try
             {
-                if (!sku.IsNullOrEmpty() && linie != 0)
+                if (!string.IsNullOrEmpty(sku) && linie != 0)
                 {
                     var idLinea = _context.Lineas.Where(x => x.NumLinea == linie).ToList();
                     var linea = await _context.Lineas.FindAsync(idLinea[0].Id_linea);

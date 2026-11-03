@@ -1,0 +1,700 @@
+========================================================================
+ PTM NewScale - Web API - Contexto del proyecto y bitacora de cambios
+ Ultima actualizacion: 03/11/2026
+========================================================================
+
+ ESTADO ACTUAL PARA RETOMAR (03/11/2026)
+------------------------------------------------------------------------
+ - Este archivo se creo el 03/11/2026. Es la contraparte del
+   cambios.txt de la plataforma web
+   (C:\Paradox\DEVELOPMENT\NewScaleWebPlatForm\cambios.txt).
+ - Esta solucion ES el backend HTTP de la plataforma PTM NewScale.
+   El portal (ASP.NET MVC 5 / .NET 4.8) NO habla con HANA ni con SQL
+   directamente: todo pasa por esta API.
+ - Repositorio: C:\Paradox\DEVELOPMENT\NewScaleWebApi
+ - Rama activa: main
+ - Ultimo commit: 4d46314 "Ajustes de horarios de scrap" (01/10/2026)
+ - Origin: github.com/developerdavpdx/NewScaleWebApi
+ - OJO: hay CAMBIOS SIN COMMITEAR desde el 01/10/2026. Los mas
+   importantes estan en la seccion 9 y se detallan en la 10:
+     * InfoTickets: nuevo endpoint GET GetTickets2 (filtra por proceso).
+     * Corrugados: filtro por Categoria/proceso en tickets.
+     * UpdateMaterialEmb acepta "Proceso" (corrige que Corrugado
+       guardara PT).
+     * KPIs de graficas ahora nullable.
+     * CORS AllowAll + scheduler por Timer en Program.cs.
+     * HistorialPesadas: parametros P_CORRUGADO / P_IGNORENEWSCALE.
+     * SAP: csSendToSAP reemplazado por csSSendToSAP y logging.
+     * Paquetes actualizados y appsettings apuntando a HANA Cloud.
+ - Pendiente inmediato sugerido: revisar esos cambios, decidir que se
+   commitea y agregar un .gitignore (hoy el repo versiona bin/obj/.vs).
+ - La API debe correr en https://localhost:7227 con working directory
+   WebApiPtmHana\ (escribe archivos en TicketPTM\ y logs).
+ - Para compilar: MSBuild de Visual Studio, NO "dotnet build"
+   (referencia COM SAPbobsCOM -> MSB4803).
+
+ 1. CONTEXTO GENERAL
+------------------------------------------------------------------------
+ - Proyecto: PTM NewScale (control de produccion, pesaje, scrap,
+   inventarios y molinos de PTM).
+ - Backend: ASP.NET Core Web API sobre .NET 9.
+ - Frontend que la consume: PTM NewScale Web (ASP.NET MVC 5,
+   .NET Framework 4.8, IIS Express en https://localhost:44390).
+ - Repo del portal:
+   C:\Paradox\DEVELOPMENT\NewScaleWebPlatForm
+ - Datos:
+     * SAP HANA Cloud (schema DBADMIN) para login, SKU/PT, historial
+       de pesadas, tickets y consultas SAP.
+     * SQL Server local (PtmNwScale2) para el modulo de Molinos,
+       graficas, taras y algunas tablas de apoyo.
+     * SAP Business One: Service Layer (REST) y DI API (COM).
+ - La API expone Swagger en /swagger (se habilita en Development y
+   tambien en Production; ver riesgos en la seccion 11).
+
+ 2. ARQUITECTURA Y ESTRUCTURA
+------------------------------------------------------------------------
+ Solucion: WebApiPtmHana.sln (4 proyectos, todos net9.0)
+
+   WebApiPtmHana/                 -> Web API (punto de entrada)
+     Controllers/                 -> 18 controladores (incluye PtmHana
+                                     y Estados, sin sufijo Controller)
+     Models/                      -> modelos de request/response
+     Common/GlobalCommands.cs     -> utilidades (SAP, XML, excepciones)
+     Services/                    -> MailService, EmailServices,
+                                     TokensService, LoginServiceLayer,
+                                     CheckOverWeight
+     Shedule/                     -> SheduleTurno1 / SheduleTurno2
+     TicketPTM/                   -> plantillas HTML, imagenes y logs
+     Program.cs                   -> DI, CORS, Swagger, Serilog, jobs
+     appsettings.json             -> configuracion y cadenas de conexion
+
+   WebApiPtmHana.BLL/             -> logica de negocio (services)
+     Services/<Modulo>Serv/       -> interfaz + implementacion
+
+   WebApiPtmHana.DAL/             -> acceso a datos
+     DataContext/ApplicationDbContext.cs
+     DataContext/Repositories/    -> repositorios EF Core
+     Migrations/                  -> migraciones EF (desde 2023)
+
+   WebApiPtmHana.Datos/           -> entidades POCO
+
+ - Capas: Controller -> BLL Service -> DAL Repository -> EF Core o
+   ADO.NET (segun el modulo). Varios controladores NO usan las capas:
+   abren SqlConnection/HanaConnection directo (Molinos, Corrugados,
+   Scrap en parte, etc.). Es deuda tecnica conocida.
+ - OJO: LiniasController vive en WebApiPtmHana/Models/LiniasController.cs
+   (namespace WebApiPtmHana.Models), no en Controllers/. Funciona igual
+   porque el assembly se escanea completo, pero es una ubicacion
+   atipica.
+ - OJO: el controlador PtmHana se llama "PtmHana" (sin sufijo
+   Controller) y el de Estados se llama "Estados"; por el atributo
+   [Route("api/[controller]")] sus rutas son /api/PtmHana y /api/Estados.
+
+ 3. CONFIGURACION (appsettings.json)
+------------------------------------------------------------------------
+ Claves principales (NO se copian credenciales en este archivo):
+
+   StoredProcedurePrefix   -> "DBADMIN" (HANA Cloud).
+                              Alternativa comentada: TEST_JUNIO_2026.
+   SapSettings             -> Service Layer (URL, DB, usuario, password)
+   SapDBCredentials        -> SLD, servidor, company DB y usuario SAP
+   Almacen                 -> WarehouseCode/Series (COR101/253) y
+                              WarehouseCode2/Series2 (P2101/329)
+   ConnectionStrings
+     DefaulConnection      -> HANA (login, SKU, historial, tickets)
+     Hana                  -> copia de la anterior
+     SQLConnection         -> SQL Server (Molinos, graficas, taras)
+     Sql                   -> copia de la anterior
+   RutaLogs                -> carpeta de logs (hoy sin referencias)
+   FechaDeGuardado         -> fecha de referencia (hoy sin referencias)
+   HorariosScrap           -> cortes 04:30:01-16:30:00 y
+                              16:30:01-04:30:00
+   JwtSettings             -> Issuer, Audience, Key, ExpiresInMinutes
+   AllowedHosts            -> "*"
+
+ - appsettings.Development.json solo redefine niveles de Logging.
+ - IMPORTANTE: las cadenas y las credenciales SAP estan en texto plano
+   y el archivo SI esta versionado. Si se publica el repo, hay que
+   moverlas a user-secrets o variables de entorno.
+ - El prefijo de los stored procedures de HANA se toma de
+   StoredProcedurePrefix. Por eso las llamadas son del tipo
+   $"{prefijo}.SPPDX_GetSkuPT". Sin ese prefijo correcto la API
+   responde 500 desde HANA.
+
+ 4. MAPA DE ENDPOINTS
+------------------------------------------------------------------------
+ Base: /api/[controller]. Todos los controladores son [ApiController].
+ La mayoria recibe parametros por HEADER (no por query ni body), lo
+ que es una convencion propia de este proyecto. Excepciones marcadas.
+
+ AccountController                      (/api/Account)
+   POST Login            body LoginModel (email/password). Valida con
+                         SPPDX_LOGIN, genera JWT y lo guarda en
+                         UserTokens. Devuelve { data: [usuario] }.
+   POST LogOut           header userId.
+   POST ValidateToken    header userId. Valida el JWT guardado.
+
+ AcumuladoEmbController                 (/api/AcumuladoEmb)
+   POST AddAcumuladoEmbarque   headers proceso, familia, peso, planta.
+
+ BasculasController                     (/api/Basculas)
+   POST RecibirPesos           body { IDBascula, Peso } (memoria).
+   GET  ConsultarPeso/{idBascula}
+   GET  BasculasIDs
+
+ CorrugadosController                   (/api/Corrugados)
+   GET  GetDataMaster                   header planta.
+   POST AddArticuloToNwScale            body JSON.
+   GET  GetLiniesCorrugados             header planta.
+   POST CreateNewLinieCorrugados        headers idLinea, proceso, planta.
+   POST DeleteLinieCorrugados           headers idLinea, planta.
+   GET  GetLiniesHistoryAsignedCorrugados  headers linea, planta.
+   GET  GetArticulosSAP
+   POST GetKgHoraCorrugados             body JSON.
+   POST GetOF_SAP                       body JSON.
+   POST AsignarLinea                    body DataAsignarLinea.
+   POST Des_AsignarLinea                body DataGeneralLineaPlanta.
+   GET  ValidarCodigoExiste             headers Linea, code, planta.
+   GET  GetPesosPTM                     headers peso, code, numTubos,
+                                        planta, proceso.
+   POST AddNewDBRegister                body DataAddTicket.
+   POST GetDescriptionCodeScrap         body JSON.
+   GET  GetScrapID
+   POST AddNewDBRegisterScrap           body DataAddScrap.
+
+ EmailController                        (/api/Email)
+   GET  GetEmails              SPPDX_GETEMAILS (SAP).
+   GET  GetEmailsMolinos       SPPDX_GETEMAILSMOLINOS.
+   POST sendmail               body EmailModel (adjunta PDF/base64).
+   POST AddMailTxt             headers correo, planta.
+   POST RemoveMailTxt          headers correo, planta.
+   GET  GetMailTxt             header planta.
+
+ EstadosController                      (/api/Estados)
+   POST EstadoBascula          body ModeloBascula.
+   GET  EstadoSemaforo         query idbascula.
+   GET  ObtenerPesoBascula     header bascula.
+   POST AddBase64              body BaseImpresionModel.
+   GET  GetBaseTicket          query idbascula.
+
+ GraficasController                     (/api/Graficas)
+   GET  GraficasInfo           headers planta, turno (+ filtros).
+   GET  UpdateObjetivosData    headers planta, proceso, valores.
+
+ HistorialPesadasController             (/api/HistorialPesadas)
+   GET  GetAllHistorial        header planta.
+   POST DisableRegister        body DesabilitarPtModel.
+   GET  GetHistoryRecordById   header idHistPesada.
+   POST EditRegisterById       body EditarHitorialPesadas.
+   GET  GetBitacoraPesadas     header idHPesadas.
+   POST CopyRegister           body CopiaRegistroModel.
+   GET  FilterHistorical       headers turno, codigo, idEstadoSap,
+                               fechaInicio, fechaFin, planta.
+
+ InfoTicketsController                  (/api/InfoTickets)
+   GET  GetTickets             header numplanta (turno actual).
+   GET  GetTickets2            headers numplanta, process (NUEVO).
+   POST GetTicketByLinea       headers linea, userId.
+   GET  GetTicketById          header id.
+   GET  GetPrintTicketById     header id (datos para ZPL).
+   GET  getTicketTemplate      plantilla PT (PVC/INY).
+   GET  getTicketTemplateMolinos
+   GET  getTicketTemplateScrap
+   POST UpdateTicketById       headers idTicket, peso, pesoBascula, etc.
+   POST AddNewTicket           headers linea, sku, turno, planta.
+   GET  FilterTickets          headers folio, turno, fechaInicio,
+                               fechaFin, planta.
+
+ LiniasController                      (/api/Linias)
+   GET  GetBitacoraLinie       headers linie, planta.
+   POST AsignSkuToLinie        headers sku, linea, username, turno,
+                               kgxhr, userId, ordenFabricacion, folio,
+                               planta.
+   POST CreateNewLinie         headers idLinea, proceso, planta.
+   POST DeleteLinea            headers Linea, planta.
+   POST ValidateSkuByLinie     headers idLinea, itemcode, planta.
+   POST UnassignLinieAndTicket headers idLinea, userId, planta.
+   OJO: SkuInfo y Linias exponen rutas con el mismo nombre
+   (AsignSkuToLinie y GetBitacoraLinie), pero bajo controladores
+   distintos (/api/SkuInfo y /api/Linias). El portal usa las de
+   Linias para asignar y las de SkuInfo para consultar/validar.
+
+ MolinosController                     (/api/Molinos)
+   GET  AgregarQuitarMolino    headers NumeroMolino, Proceso,
+                               HorasxTurno, Eficiencia, Borrar, Planta,
+                               ObjetivoProduccion, Nombre.
+   GET  ObtenerNumeroMolinos   header Planta.
+   GET  ActualizarMolino       headers NumeroMolino, Eficiencia, ...
+   GET  ActualizarParoMolino   headers NumeroMolinoParo, PlantaParo, ...
+   GET  ObtenerDatosReporteMolinos  headers Planta, FechaInicio, ...
+   GET  DatosDashboard         headers Planta, Turno, ...
+   GET  ObtenerArticulosMolinos     header Planta.
+   GET  ValidarCodigo          headers Planta, Codigo.
+   GET  ObtenerHorasyObjetivoMolino headers Linea, Planta.
+   GET  AgregarEscaneo         headers Molino, Turno, ...
+   GET  AgregarEliminarActualizarCodeArticulos
+   GET  ActualizaHorasParoRegistro
+   GET  ObtenerMolinero        headers CodigoMolinero, Planta.
+   GET  ObtenerMolinerosMolinos header Planta.
+   GET  AgregarEliminarOperador
+   GET  ObtenerDatosScrapIngresos  headers Planta, FechaInicio, ...
+   GET  CRUDMotivosDeParoMolinos   headers Planta, Accion, Motivo, Id.
+   GET  CRUDFamiliasMolinos        headers Planta, Accion, Familia, Id.
+   GET  CRUDTiposMaterialMolinos   headers Planta, Accion, Tipo,
+                                   Proceso, Id.
+   GET  CRUDRegistroIngresos       headers Accion, Id, Planta, Codigo, ...
+   POST GuardarDatosExcelIngresosEnBD  body List<Dictionary<string,string>>
+   (Todos usan SQL Server y stored procedures Sppdx_*.)
+
+ ProductTerminadoController            (/api/ProductTerminado)
+   POST UpdateMaterialEmb      body UpdateMaterialRequest (incluye
+                               Proceso desde 2026).
+   GET  GetLineas              header planta.
+   GET  GetPTByLinie           headers numLinea, planta, corte, ...
+   GET  FilterFinishedProduct  headers turno, codigo, fechaInicio,
+                               fechaFin, ...
+   GET  FiltroScrapCorte       headers fechaInicio, fechaFin, ...
+
+ PtmHanaController                     (/api/PtmHana)
+   GET  GetLinesProduction
+   GET  GetPVCScrap
+   GET  GetInjectionScrap
+   GET  GetFinishedProduct
+   GET  SSHExample             (prueba de conexion SSH)
+
+ ReporteProductoTermController         (/api/ReporteProductoTerm)
+   GET  GetAllPt               headers planta, proceso.
+
+ SapController                         (/api/Sap)
+   GET  GenerarXml             header identificador (XML PT).
+   POST EnvioSap               body EnvioSapModel.
+   GET  GenerarXml2            headers identificador, Planta.
+   GET  GetDocEntrys           headers itemcode, series.
+
+ SapPtmController                      (/api/SapPtm)
+   GET  GetAllPT               headers planta, Corrugado,
+                               IgnoreNewScale.
+   GET  GetPTbySku             headers sku, planta, IgnoreNewScale.
+   GET  GetFabricOrder         header series.
+   GET  GetFabricOrderDetail  header docentry.
+   GET  GetNewScaleItems
+   GET  GetItemName            header itemCode.
+   POST UpdateNwScaleItem      header itemcode.
+   GET  ObtenerInfoLinea       headers sku, planta.
+   POST ActualizarInfoLineas   body List<LineaData>.
+   GET  AddNewDataLine         headers kgHora, linea, ...
+
+ ScrapController                       (/api/Scrap)
+   POST SendToMills            body EnvioMolinosModel.
+   GET  GetAfterIdProduction   header idProduccion.
+   POST AddScrap               body Scrap.
+   GET  GetAllReciboScrap      header planta.
+   GET  GetAllScrap            query ?planta= (OJO: no es header).
+   POST AddRemolido            body Scrap.
+   GET  GetNextIdEnvioScrap
+   GET  GetNextIdScrap
+   GET  FilterScrap            headers fechaInicio, fechaFin, turno,
+                               planta.
+   GET  getPlantillaExcel
+   POST EditScrap              body EditarHitorialPesadas.
+   GET  GetScrap               header id.
+
+ SkuInfoController                     (/api/SkuInfo)
+   GET  GetAllSkuInfo          headers userId, planta.
+   GET  SkuInfo                header sku, userId.
+   POST AsignSkuToLinie        headers sku, linea, userId, turno, kgxhr.
+   GET  GetBitacoraLinie       headers linie, userId, planta.
+   POST ValidateWeight         headers ItemCode, numTubos.
+   POST ValidateWeight2        headers ItemCode, peso, numTubos, planta.
+
+ TarasController                       (/api/Taras)
+   POST UpdateTare             body ExcelTareUpdate.
+   POST UpdateKgHora           body ExcelKgHoraUpdate.
+
+ - Total: 127 acciones HTTP (18 controladores + LiniasController).
+ - Para el detalle exacto y probar en vivo, usar Swagger:
+   https://localhost:7227/swagger
+
+ 5. CONVENCIONES Y PATRONES
+------------------------------------------------------------------------
+ - Parametros: casi todo por [FromHeader]. Si el header no llega, el
+   int.Parse/las conversiones lanzan excepcion y el endpoint responde
+   500 con { "Message": "..." }. No hay validacion global.
+ - Respuestas: NO hay un envoltorio unico. Conviven:
+     { status = 200, data = ... }
+     { status = 200, message = "..." }
+     { response = "texto" }
+     { TicketsInfos } / lista directa
+   El portal a veces revisa "status", a veces "response", a veces el
+   status HTTP. Al agregar endpoints conviene seguir el estilo del
+   controlador vecino.
+ - Errores: catch (Exception ex) -> StatusCode(500, new { ex.Message })
+   o new { response = ... }. No hay middleware global de errores.
+ - Codificacion: el codigo fuente tiene acentos rotos en varios
+   mensajes (vienen de archivos guardados en ANSI). No se han
+   normalizado.
+ - Fechas: se usan DateTime.Parse/DateTime.Today en hora local del
+   servidor. Los cortes de turno estan fijos en el codigo (04:30 y
+   16:30) y en HorariosScrap para el modulo de scrap.
+ - Auth: Login genera JWT, pero la validacion esta comentada en la
+   mayoria de los endpoints y no hay [Authorize] global. Varios
+   controladores aun reciben userId solo para auditoria.
+ - CORS: politica "AllowAll" (AllowAnyOrigin/Method/Header).
+ - Swagger: habilitado en Development y Production.
+ - No hay pruebas automatizadas.
+
+ 6. BASES DE DATOS Y STORED PROCEDURES
+------------------------------------------------------------------------
+ HANA Cloud (Sap.Data.Hana, Sap.Data.Hana.Core.v2.1)
+   - Connection string: ConnectionStrings:DefaulConnection.
+   - Prefijo de SP: StoredProcedurePrefix ("DBADMIN" hoy).
+   - SPs usados: SPPDX_LOGIN, SPPDX_GetSkuPT, SPPDX_GETEMAILS,
+     SPPDX_GETEMAILSMOLINOS y los del modulo Sap/SapPtm.
+   - Usan HanaConnection/HanaCommand/HanaDataReader directo.
+   - Controladores: Account, Email, HistorialPesadas, Sap, SapPtm,
+     PtmHana y partes de Corrugados/InfoTickets.
+
+ SQL Server (PtmNwScale2)
+   - Connection string: ConnectionStrings:SQLConnection.
+   - EF Core 7.0.5 + repositorios en DAL. Tambien hay ADO directo
+     (Microsoft.Data.SqlClient) en Molinos, Graficas, Taras,
+     ProductTerminado y Scrap.
+   - SPs propios: Sppdx_* (Molinos, ingresos, lineas).
+   - DbSets: Lineas, EnvioSAP, EstadosSap, EnvioScraps, TicketsInfos,
+     ScrapMolinos, HistorialPesadas, ProductoTerminados,
+     AcumuladoEmbarques, BitHistorialPesadas,
+     EstatusHistorialPesadas, BitacoraAsignacionLinias, UserTokens,
+     SkuInfos, EstadosPesos, EstadosSemaforos, BaseImpresion.
+   - Migraciones EF de 2023; los cambios recientes NO agregaron
+     migraciones (fueron parametros de SP y cambios de codigo).
+
+ OJO: el proyecto mezcla HANA y SQL Server en el mismo flujo. Por
+ ejemplo, InfoTickets lee tickets de SQL Server, pero algunas
+ validaciones van a HANA. Si una pantalla falla, primero identificar
+ cual de las dos conexiones esta respondiendo.
+
+ 7. TICKETS, CORREOS Y TRABAJOS PROGRAMADOS
+------------------------------------------------------------------------
+ Plantillas y archivos (WebApiPtmHana/TicketPTM/):
+   TicketPtM.html           -> ticket de PT (PVC/INY)
+   TicketMolinos.html       -> ticket de molinos
+   TicketScrap.html         -> ticket de scrap
+   ReportEmail.html         -> reporte HTML de turno
+   emailReporteTemplate.html
+   LogoPTMHD.png, bell.png, check.png, fd.gif, datos.xlsx
+   CorreJob.txt, CorreoEnvicado.txt, ErroresEnvioMail.txt,
+   ErroresStore.txt, logEmai.txt
+ - Las rutas son relativas a Directory.GetCurrentDirectory(), por eso
+   la API debe arrancar con working directory WebApiPtmHana\.
+ - El ticket se devuelve como HTML y el portal lo imprime / lo manda a
+   labelary para la vista previa en imagen.
+
+ Correos:
+   - GetEmails / GetEmailsMolinos consultan SAP (HANA).
+   - AddMailTxt / RemoveMailTxt / GetMailTxt usan archivos:
+       C:\Paradox\ListaCorreos1.txt  (planta 1)
+       C:\Paradox\ListaCorreos2.txt  (planta 2)
+   - Si el archivo no existe, esas rutas responden 500. El portal lo
+     maneja mostrando la lista vacia.
+
+ Jobs (SheduleTurno1):
+   - Se instancia manualmente en Program.cs (no es HostedService).
+   - Timer 1: diario 17:45 -> cierre turno 1, envia reporte PPVC e INY.
+   - Timer 2: diario 05:45 -> cierre turno 2, mismo envio.
+   - Usa MailService.sendReport -> EmailServices.ObtenerDatosReporte
+     (SP DatosReporte en SQL Server) y manda el HTML por SMTP.
+   - SheduleTurno2 (BackgroundService) existe pero NO esta registrado
+     en Program.cs; es codigo muerto.
+   - OJO: si se levantan dos instancias de la API, los jobs se
+     duplican (cada proceso crea sus propios timers).
+
+ Logs:
+   - Serilog escribe en C:\Paradox\PTM\Logs\log-YYYYMMDD.txt
+     (ruta fija en Program.cs) y ademas loguea cada request.
+   - Los jobs escriben sus propios .txt en TicketPTM\.
+
+ 8. RELACION CON EL PORTAL (modulo -> endpoints)
+------------------------------------------------------------------------
+ Esta es la guia rapida para saber que tocar cuando cambia una vista:
+
+   Portal /Inicio (Dashboard)
+     Graficas/GraficasInfo, Graficas/UpdateObjetivosData,
+     ProductTerminado/*, ReporteProductoTerm/GetAllPt.
+   Portal /ProductoTerminado
+     ProductTerminado/FilterFinishedProduct, FiltroScrapCorte,
+     GetPTByLinie, GetLineas, UpdateMaterialEmb.
+   Portal /ProdTerminadoINY
+     ProductTerminado/FilterFinishedProduct y FiltroScrapCorte
+     (mismos endpoints, cambia el proceso/planta). El endpoint
+     GetPtInyByLinie esta comentado en el portal y no existe aqui.
+   Portal /HistorialPedidas
+     HistorialPesadas/GetAllHistorial, FilterHistorical,
+     GetHistoryRecordById, EditRegisterById, DisableRegister,
+     CopyRegister, GetBitacoraPesadas.
+   Portal /DetallesSKU y Datos Maestros
+     SkuInfo/GetAllSkuInfo, SkuInfo/SkuInfo, SkuInfo/ValidateWeight,
+     SkuInfo/ValidateWeight2, SapPtm/GetPTbySku,
+     SapPtm/ObtenerInfoLinea, SapPtm/ActualizarInfoLineas,
+     SapPtm/AddNewDataLine, SapPtm/GetAllPT.
+   Portal /AsignacionLinia y /PesajePt
+     Linias/GetBitacoraLinie, AsignSkuToLinie, CreateNewLinie,
+     DeleteLinea, ValidateSkuByLinie, UnassignLinieAndTicket,
+     InfoTickets/*, Estados/*.
+   Portal /Molinos/* (Dashboard, Ingresos, Catalogos, Reporte,
+   Concentrado)
+     Molinos/* (todos). El concentrado hoy es un prototipo con datos
+     fijos en el JS y NO consulta la API.
+   Portal /Operador/* (Corrugado)
+     Corrugados/*, InfoTickets/GetTickets2 (nuevo, aun no consumido
+     por el portal), InfoTickets/GetTicketById, UpdateTicketById,
+     AddNewTicket, getTicketTemplate*, Estados/*.
+   Portal /Taras
+     Taras/UpdateTare, Taras/UpdateKgHora.
+   Portal /Correos (modal global)
+     Email/GetEmails, GetEmailsMolinos, GetMailTxt, AddMailTxt,
+     RemoveMailTxt, sendmail.
+   Portal /OrdenesFabricacion y /DetallesFO
+     SapPtm/GetFabricOrder, GetFabricOrderDetail, GetDocEntrys,
+     GetItemName, Sap/GenerarXml2, Sap/EnvioSap.
+   Portal /Scrap, /ScrapIny, /ReciboScrap, /Reportes
+     Scrap/* y ReporteProductoTerm/GetAllPt.
+
+ Diferencias conocidas entre portal y API:
+   - El portal filtra Reimpresiones de Corrugado en el navegador
+     porque no existia un endpoint con proceso. La API ya tiene
+     GetTickets2 (sin commitear) pero el portal todavia no lo usa.
+   - FilterTickets2 existe en DAL/BLL pero NO esta expuesto como
+     ruta en InfoTicketsController. Solo se agrego GetTickets2.
+   - El portal referencia api/Linias/* y esta API los tiene en
+     Models/LiniasController.cs.
+
+ 9. ESTADO DE GIT Y ARCHIVOS
+------------------------------------------------------------------------
+ - Rama: main (sin ramas locales adicionales).
+ - Origin: https://github.com/developerdavpdx/NewScaleWebApi.git
+ - Ultimos commits:
+     4d46314  01/10/2026  Ajustes de horarios de scrap
+     a1662f1  22/07/2026  Last Version
+     0d050c2  16/06/2026  Ultima Version Estable
+     9b8aa9e  15/06/2026  Ultima Version Actual
+ - El repo NO tiene .gitignore y versiona 1,606 archivos, de los
+   cuales:
+     bin/  -> 810
+     obj/  -> 533
+     .vs/  ->  32
+   Es la misma deuda que el portal. Cualquier commit arrastra ruido.
+ - Archivos nuevos sin trackear (codigo, no binarios):
+     WebApiPtmHana/Controllers/BasculasController.cs
+     WebApiPtmHana/Controllers/CorrugadosController.cs
+     WebApiPtmHana/Controllers/MolinosController.cs
+     WebApiPtmHana/Models/Corrugados/
+     WebApiPtmHana/Models/Molinos/
+     WebApiPtmHana/Models/SAP/csSSendToSAP.cs
+   (Ademas hay binarios regenerados en bin/obj y snapshots de .vs.)
+ - Archivo eliminado en el working tree:
+     WebApiPtmHana/Models/SAP/csSendToSAP.cs
+   Fue reemplazado por csSSendToSAP.cs (misma funcionalidad, nombre y
+   API distintas). SapController ya apunta al nuevo.
+ - Modificados (codigo/config, sin commitear):
+     GraficasController, HistorialPesadasController,
+     InfoTicketsController, ProductTerminadoController, SapController,
+     SapPtmController, SkuInfoController, Program.cs,
+     SheduleTurno1.cs, appsettings.json, csproj de la API y de DAL,
+     BLL/DAL de SkuInfo, Tickets, Lineas, GraficaPieCantidadTb,
+     Models/LiniasController.cs.
+ - TicketPTM/*.txt tambien aparecen modificados: son logs de
+   ejecucion, no codigo. Conviene dejar de versionarlos.
+
+ 10. CAMBIOS RELEVANTES (working tree, pendientes de commit)
+------------------------------------------------------------------------
+ - InfoTickets / reimpresiones por proceso (NUEVO):
+     Se agrego GET /api/InfoTickets/GetTickets2 (headers numplanta y
+     process). Usa GetAll2 en el repositorio y filtra por
+     TicketsInfos.Categoria == process, ademas del turno actual.
+     Tambien se agrego FilterTickets2 en DAL/BLL (filtra por proceso,
+     turno, folio y rango de fechas), pero SIN ruta en el controlador.
+     Comentario en el codigo: se usa para Corrugados y quedara hasta
+     migrar PVC/INY.
+
+ - SkuInfo / UpdateMaterialEmb con Proceso:
+     El request ahora incluye Proceso. Se propaga por
+     ProductTerminadoController -> ISkuInfo -> SkuInfoService ->
+     IGenericRepoSkuInfo -> SkuInfoRepositorie.
+     Antes el repositorio forzaba Proceso = "PT"; ahora usa el valor
+     recibido y, si viene vacio, conserva "PT". Con esto el portal
+     puede guardar "Corrugado" sin que se sobrescriba.
+
+ - Graficas / KPIs nullable:
+     KPISinfo (Models/Graficas/GraficaPieCantidadTb.cs) cambio sus
+     float a float?. Evita que los valores nulos de HANA/SQL se
+     conviertan en 0 y permite distinguir "sin dato" de "cero real".
+
+ - Program.cs / CORS y scheduler:
+     Se agrego la politica CORS "AllowAll" (antes estaba comentada) y
+     se instancia SheduleTurno1 manualmente al final. Se eliminaron
+     los AddHostedService comentados. Swagger sigue habilitado en
+     Development y Production.
+
+ - SheduleTurno1 / FluentScheduler fuera:
+     Ya no hereda de Registry ni usa Schedule().ToRunEvery(...).
+     Ahora usa System.Threading.Timer con GetTimeUntil(17,45) y
+     GetTimeUntil(5,45). Se conservan los mismos dos jobs y el log en
+     TicketPTM/CorreJob.txt.
+
+ - HistorialPesadas / SP SPPDX_GetSkuPT:
+     GetAllHistorial y FilterHistorical agregan P_CORRUGADO
+     (NVarChar, null) y P_IGNORENEWSCALE (Integer, null). Sin esos
+     parametros HANA respondia 500 "P_CORRUGADO is not bound". Es el
+     mismo fix documentado en el cambios.txt del portal (29/10/2026).
+
+ - SapPtm / nuevos filtros:
+     GetAllPT acepta Corrugado e IgnoreNewScale por header y los pasa
+     al SP. GetPTbySku agrega P_IGNORENEWSCALE. Sirve para separar
+     PT de Corrugado y para ignorar lo que no viene de NewScale.
+
+ - SAP / csSSendToSAP:
+     Se reemplazo csSendToSAP por CSSendToSAP (namespace
+     WebApiPtmHana.Models.SAP). Cambia SaveXmlFile (recibe el nombre
+     del archivo), se agrega ILogger<SapController>, se registra el
+     XML generado y se cambio el manejo de errores (InsertError en
+     lugar de ActualizaTablaSQLHPCatch). Revisar que el flujo de
+     envio a SAP siga igual antes de commitear.
+
+ - Dependencias:
+     API: FluentScheduler 6.0.0, log4net 3.5.0,
+     JwtBearer 9.0.0, IdentityModel.Tokens 8.23.0,
+     System.IdentityModel.Tokens.Jwt 8.23.0, SSH.NET 2026.0.0,
+     Swashbuckle 10.3.0, Newtonsoft 13.0.4.
+     DAL: Microsoft.Extensions.Configuration 10.0.13 y
+     Configuration.Json 10.0.13.
+     OJO: sigue habiendo dos COMReference SAPbobsCOM (v9 y v10).
+
+ - appsettings:
+     Paso de on-premise (TEST_JUNIO_2026) a HANA Cloud (DBADMIN).
+     Se agregaron HorariosScrap y se cambio la conexion SQL a la
+     instancia local. Las versiones on-premise quedaron comentadas.
+     No commitear sin revisar credenciales y ambiente.
+
+ 11. PENDIENTES Y RIESGOS
+------------------------------------------------------------------------
+ - Commit pendiente: hay mucho trabajo sin versionar. Antes de
+   commitear, separar:
+     1) codigo (controladores, BLL, DAL, modelos, Program, Shedule)
+     2) configuracion (appsettings/csproj)
+     3) ruido generado (bin, obj, .vs, TicketPTM/*.txt)
+   Ideal: agregar .gitignore y sacar bin/obj/.vs del indice.
+ - Seguridad:
+     * Credenciales SAP/HANA/SQL en texto plano y versionadas.
+     * CORS abierto a cualquier origen.
+     * Swagger expuesto en Production.
+     * JWT generado pero practicamente no exigido ([Authorize] y
+       validaciones comentadas).
+     * No hay rate limiting ni validacion global de headers.
+ - Robustez:
+     * int.Parse/DateTime.Parse sobre headers sin TryParse: un header
+       faltante o mal formado responde 500.
+     * No hay middleware global de excepciones ni ProblemDetails.
+     * Respuestas con formas distintas; el portal debe adivinar.
+     * Mezcla de EF Core y ADO en el mismo flujo.
+     * Logica de negocio en controladores (Molinos y Corrugados son
+       los mas grandes: ~60 KB y ~54 KB).
+ - Funcional:
+     * Exponer FilterTickets2 o retirarlo si no se usara.
+     * Que el portal consuma GetTickets2 para Reimpresiones de
+       Corrugado (hoy filtra en el navegador).
+     * GetPtInyByLinie no existe; el portal lo tiene comentado.
+     * Concentrado de Inventarios es prototipo con datos fijos.
+     * SheduleTurno2 sin registrar (codigo muerto).
+     * RutaLogs y FechaDeGuardado en appsettings sin referencias.
+ - Build:
+     * "dotnet build" falla por la referencia COM. Usar MSBuild de
+       Visual Studio.
+     * Hay dos COMReference al mismo componente (v9 y v10); revisar
+       si ambas siguen siendo necesarias.
+ - Rutas fijas que deben existir en la maquina:
+     * C:\Paradox\PTM\Logs\           (Serilog)
+     * C:\Paradox\ListaCorreos1.txt  y ListaCorreos2.txt
+     * TicketPTM\ con las plantillas (relativo al working dir)
+
+ 12. COMPILAR, EJECUTAR Y PROBAR
+------------------------------------------------------------------------
+ COMPILAR
+   - Abrir WebApiPtmHana.sln en Visual Studio y compilar (F6), o
+     usar el MSBuild de VS en un Developer Command Prompt:
+       msbuild WebApiPtmHana.sln /p:Configuration=Debug
+   - No usar "dotnet build" (COMReference -> MSB4803).
+
+ EJECUTAR
+   - Normal: F5 en Visual Studio (perfil WebApiPtmHana).
+     Levanta https://localhost:7227 y http://localhost:5079 y abre
+     /swagger.
+   - Por consola, desde WebApiPtmHana\:
+       $env:ASPNETCORE_URLS="https://localhost:7227"
+       .\bin\Debug\net9.0\WebApiPtmHana.exe
+     Debe ejecutarse con working directory WebApiPtmHana\.
+   - Verificar que 7227 este libre y NO usar 44390 para la API (esa
+     la usa IIS Express del portal; una reserva huerfana deja el
+     servicio http.sys en StopPending y obliga a reiniciar Windows,
+     ver cambios.txt del portal, seccion 10).
+   - Comprobar puertos:
+       netstat -ano | findstr :7227
+       netstat -ano | findstr :44390
+
+ PROBAR (PowerShell)
+   - Login:
+       $body = '{"UserEmail":"...","Password":"..."}'
+       Invoke-RestMethod -Method Post `
+         -Uri "https://localhost:7227/api/Account/Login" `
+         -ContentType "application/json" -Body $body
+   - Scrap por planta (query, no header):
+       Invoke-RestMethod "https://localhost:7227/api/Scrap/GetAllScrap?planta=1"
+   - Tickets de Corrugado (headers):
+       Invoke-RestMethod `
+         -Uri "https://localhost:7227/api/InfoTickets/GetTickets2" `
+         -Headers @{ numplanta = "1"; process = "Corrugado" }
+   - Historial:
+       Invoke-RestMethod `
+         -Uri "https://localhost:7227/api/HistorialPesadas/GetAllHistorial" `
+         -Headers @{ planta = "1" }
+   - Swagger es la forma mas rapida de ver firmas y headers.
+   - Si HTTPS falla por certificado de desarrollo:
+       dotnet dev-certs https --trust
+
+ ORDEN DE ARRANQUE PARA PROBAR EL PORTAL
+   1) SQL Server y acceso a HANA Cloud disponibles.
+   2) API en 7227 (F5 o exe).
+   3) Portal en 44390 (F5 / IIS Express).
+   4) Abrir la vista del portal y revisar Consola + Network.
+
+ 13. BITACORA DE CAMBIOS
+------------------------------------------------------------------------
+ 03/11/2026
+   - Se crea este archivo con el contexto completo de la API: capas,
+     configuracion, mapa de endpoints, relacion con el portal, estado
+     de git y pendientes. No se modifico codigo.
+   - Se deja constancia del trabajo sin commitear al 01/10/2026
+     (seccion 10).
+
+ 01/10/2026 - commit 4d46314 "Ajustes de horarios de scrap"
+   - Se agrego la seccion HorariosScrap en appsettings.json y se uso
+     en ProductTerminadoController para los cortes 1 y 2.
+   - El commit incluye mucho ruido de .vs/bin/obj.
+
+ 22/07/2026 - commit a1662f1 "Last Version"
+ 16/06/2026 - commit 0d050c2 "Ultima Version Estable"
+ 15/06/2026 - commit 9b8aa9e "Ultima Version Actual"
+
+ PENDIENTE DE COMMIT (al 03/11/2026)
+   - GetTickets2 + filtro por proceso en InfoTickets.
+   - Proceso en UpdateMaterialEmb/SkuInfo.
+   - KPIs nullable.
+   - CORS + scheduler por Timer.
+   - P_CORRUGADO / P_IGNORENEWSCALE en HistorialPesadas.
+   - Corrugado/IgnoreNewScale en SapPtm.
+   - csSSendToSAP.
+   - Actualizacion de paquetes y appsettings (HANA Cloud).
+
+========================================================================
+ Fin del archivo. Al cerrar cada sesion, agregar la entrada
+ correspondiente en la seccion 13.
+========================================================================

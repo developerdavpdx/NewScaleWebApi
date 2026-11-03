@@ -10,11 +10,13 @@ namespace WebApiPtmHana.BLL.Services.TicketsInfoServ
     public interface IInfoTickets
     {
         IList<TicketsInfo> GetTickets(int planta);
+        IList<TicketsInfo> GetTickets2(int planta, string process);
         IList<TicketsInfo> GetTicketByLinie(int linie);
         Task<bool> AddNewTicket(TicketsInfo ticket);
         IList<TicketsInfo> GetTicketById(int id);
         Task<bool> UpdateTicket(int idTicket, float peso, float pesoBascula, float porcentaje, bool calidad, decimal pesotubos, string? tubos, int planta);
         IList<TicketsInfo> GetPrintTickeyById(int id);
         IList<TicketsInfo> FilterTickest(int? turno, string? folio, string? fechaInicio, string? fechaFin, int planta);
+        IList<TicketsInfo> FilterTickest2(int? turno, string? folio, string? fechaInicio, string? fechaFin, int planta, string proceso);
     }
 }

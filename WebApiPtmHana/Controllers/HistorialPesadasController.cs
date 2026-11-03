@@ -50,6 +50,10 @@ namespace WebApiPtmHana.Controllers
                         command.CommandText = $"{prefijo}.SPPDX_GetSkuPT";
                         command.Connection = connection;
                         command.CommandType = CommandType.StoredProcedure;
+                        //El SP ahora exige estos parametros: sin ellos HANA responde
+                        //"P_CORRUGADO is not bound". null = sin filtro (PT y SCRPT).
+                        command.Parameters.Add("P_CORRUGADO", HanaDbType.NVarChar).Value = null;
+                        command.Parameters.Add("P_IGNORENEWSCALE", HanaDbType.Integer).Value = null;
                         using (HanaDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)
@@ -235,6 +239,10 @@ namespace WebApiPtmHana.Controllers
                         command.CommandText = $"{prefijo}.SPPDX_GetSkuPT";
                         command.Connection = connection;
                         command.CommandType = CommandType.StoredProcedure;
+                        //El SP ahora exige estos parametros: sin ellos HANA responde
+                        //"P_CORRUGADO is not bound". null = sin filtro (PT y SCRPT).
+                        command.Parameters.Add("P_CORRUGADO", HanaDbType.NVarChar).Value = null;
+                        command.Parameters.Add("P_IGNORENEWSCALE", HanaDbType.Integer).Value = null;
                         using (HanaDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)

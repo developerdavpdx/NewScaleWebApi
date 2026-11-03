@@ -70,6 +70,41 @@ namespace WebApiPtmHana.Controllers
             }
         }
 
+        //obtienes los tickets pasados para reimpresion (contempla el "proceso" como filtro) (actualmente solo se usa para corrugados, cuando se migre pvc e iny, se puede borrar la version pasada)
+        [HttpGet]
+        [Route("GetTickets2")]
+        public async Task<IActionResult> GetAllTickets2([FromHeader] string numplanta, [FromHeader] string process)
+        {
+            try
+            {
+                //var user = await _userManager.FindByIdAsync(userId);
+                //if (user == null)
+                //    return StatusCode(StatusCodes.Status500InternalServerError, new { response = "No existe el usuario dentro del sistema" });
+
+                //var token = await _userManager.GetAuthenticationTokenAsync(user!, "JWT", "Access-Token");
+                //if (token == null)
+                //    return StatusCode(StatusCodes.Status500InternalServerError, new { response = "No existe token de usuario Iniciar Sesión" });
+
+                //var jwtSettings = _configuration.GetSection("JwtSettings").Get<JwtSettings>();
+                //bool checkToken = _tokenService.ValidateTokenAccess(token!, jwtSettings.Key, jwtSettings.Audience, jwtSettings.Issuer);
+                //if (!checkToken)
+                //    return StatusCode(StatusCodes.Status500InternalServerError, new { response = "El token a expirado. Favor de iniciar sesión de nueva cuenta" });
+
+                int planta = int.Parse(numplanta);
+
+                IList<Datos.TicketsInfo> TicketsInfos = _infoTickets.GetTickets2(planta, process);
+                if (TicketsInfos.Count == 0)
+                    return StatusCode(StatusCodes.Status200OK, new { response = "No se encuentran tickets en este momento" });
+
+                return StatusCode(StatusCodes.Status200OK, new { TicketsInfos });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { ex.Message });
+            }
+        }
+
         [HttpPost]
         [Route("GetTicketByLinea")]
         public async Task<IActionResult> GetTicketByLinea([FromHeader] string linea, [FromHeader] string userId)

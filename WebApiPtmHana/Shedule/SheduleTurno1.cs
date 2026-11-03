@@ -1,21 +1,30 @@
 ﻿using System.Text;
-using FluentScheduler;
 using Microsoft.Extensions.Configuration;
 using WebApiPTMTest.Services;
 
 namespace WebApiPtmHana.Shedule
 {
-    public class SheduleTurno1 : Registry
+    public class SheduleTurno1
     {
-        
+        private Timer? _timerTurno1;
+        private Timer? _timerTurno2;
+
         public SheduleTurno1()
+        {
+            RegisterJobs();
+        }
+
+        public void RegisterJobs()
         {
             try
             {
-                Schedule(() => ExecuteJobTurno1()).ToRunEvery(1).Days().At(17, 45);
-                Schedule(() => ExecuteJobTurno2()).ToRunEvery(1).Days().At(5, 45);
-                //Schedule(() => ExecuteJobTurno1()).ToRunEvery(2).Minutes();
-                //Schedule(() => ExecuteJobTurno2()).ToRunEvery(4).Minutes();
+                // Calcular la siguiente ejecución de los jobs
+                var timeToExecuteTurno1 = GetTimeUntil(17, 45);
+                var timeToExecuteTurno2 = GetTimeUntil(5, 45);
+
+                // Crear timers para cada job (se ejecutan diariamente a las horas especificadas)
+                _timerTurno1 = new Timer(ExecuteJobTurno1Wrapper, null, timeToExecuteTurno1, TimeSpan.FromDays(1));
+                _timerTurno2 = new Timer(ExecuteJobTurno2Wrapper, null, timeToExecuteTurno2, TimeSpan.FromDays(1));
 
                 string rutaEmail = Directory.GetCurrentDirectory() + "/TicketPTM/CorreJob.txt";
                 using (StreamWriter writer = File.AppendText(rutaEmail))
@@ -41,6 +50,29 @@ namespace WebApiPtmHana.Shedule
                     writer.Close();
                 }
             }
+        }
+
+        private TimeSpan GetTimeUntil(int hour, int minute)
+        {
+            var now = DateTime.Now;
+            var target = now.Date.AddHours(hour).AddMinutes(minute);
+
+            if (target <= now)
+            {
+                target = target.AddDays(1);
+            }
+
+            return target - now;
+        }
+
+        private void ExecuteJobTurno1Wrapper(object? state)
+        {
+            ExecuteJobTurno1();
+        }
+
+        private void ExecuteJobTurno2Wrapper(object? state)
+        {
+            ExecuteJobTurno2();
         }
 
         public void ExecuteJobTurno1()

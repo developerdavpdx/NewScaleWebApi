@@ -25,13 +25,13 @@ namespace WebApiPtmHana.Controllers
         private readonly IConfiguration _configuration;
         private readonly string prefijo;
 
-        private readonly csSendToSAP xmlSap;
+        private readonly WebApiPtmHana.Models.SAP.CSSendToSAP xmlSap;  // SAP Service Layer integration
 
         private readonly ILogger<SapController> _logger; // <-- AGREGADO
 
 
 
-        public SapController(ISapEnvio sapEnvio, IWebHostEnvironment env, IConfiguration configuration)
+        public SapController(ISapEnvio sapEnvio, IWebHostEnvironment env, IConfiguration configuration, ILogger<SapController> logger)
         {
             _sapEnvio = sapEnvio;
             _env = env;
@@ -39,9 +39,10 @@ namespace WebApiPtmHana.Controllers
             this.connectionString = configuration.GetConnectionString("DefaulConnection");
             //Llamamos al prefijo para los stores
             prefijo = configuration["StoredProcedurePrefix"];
+            _logger = logger;
 
             // Instanciamos csSendToSAP pasándole IConfiguration para que lea desde appsettings.json
-            xmlSap = new csSendToSAP(configuration);
+            xmlSap = new WebApiPtmHana.Models.SAP.CSSendToSAP(configuration);
         }
 
         // --- nuevo método: obtiene BaseEntry (DocEntry) por DocNum (FolioPT)
@@ -212,8 +213,11 @@ namespace WebApiPtmHana.Controllers
                 xmlDocument.Save(rutaArchivo + "\\" + nombrearchivo);
 
                 //GUARDAR EL REGISTRO DEL XML
-                var idxmlFile = xmlSap.SaveXmlFile(rutaArchivo + "\\" + nombrearchivo);
-                xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador,string.Empty);
+                var idxmlFile = xmlSap.SaveXmlFile(nombrearchivo);
+                _logger.LogInformation("GenerarXml | Archivo guardado. IdXmlFile: {IdXmlFile}", idxmlFile);
+
+                // Esto puede quedar para un endpoint POST separado
+                // await xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador, "");
 
                 // Se retorna un mensaje indicando que se ha generado el archivo XML
                 return Ok("Archivo XML generado correctamente");
@@ -306,7 +310,7 @@ namespace WebApiPtmHana.Controllers
                 _logger.LogInformation("GenerarXml2 | JSON armado: {Json}", Request);
 
                 string nombrearchivo = "EN" + identificador + ".xml";
-                var idxmlFile = xmlSap.SaveXmlFile(rutaArchivo);
+                var idxmlFile = xmlSap.SaveXmlFile(nombrearchivo);
                 _logger.LogInformation("GenerarXml2 | Archivo guardado. IdXmlFile: {IdXmlFile}", idxmlFile);
 
                 GlobalCommands.SapResponse responseAbx = await xmlSap.ReciProdAsync(nombrearchivo, idxmlFile, identificador, Request);
@@ -319,14 +323,15 @@ namespace WebApiPtmHana.Controllers
                 else
                 {
                     _logger.LogError("GenerarXml2 | SAP rechazó el documento. Mensaje: {Mensaje}", responseAbx.Message);
-                    xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, responseAbx.Message.ToString(), "");
                     return BadRequest("no se pudo generar el documento en sap: " + responseAbx.Message);
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "GenerarXml2 | Excepción. Identificador: {Identificador} | Planta: {Planta}", identificador, Planta);
-                xmlSap.ActualizaTablaSQLHPCatch(identificador, 3, ex.ToString(), "");
+                // Update SQL Server table with error status
+                // xmlSap.ActualizaTablaSQLHP(identificador, 3, ex.ToString(), "");
+                xmlSap.InsertError("SapController.cs", "GenerarXml2", ex.ToString());
                 return BadRequest("Error al generar archivo: " + ex.ToString());
             }
         }

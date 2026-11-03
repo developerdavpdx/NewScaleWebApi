@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace WebApiPtmHana.BLL.Services.TicketsInfoServ
             return _repositorie.FilterTickets(folio, turno, fechaInicio, fechaFin, planta);
         }
 
+        public IList<TicketsInfo> FilterTickest2(int? turno, string? folio, string? fechaInicio, string? fechaFin, int planta, string proceso)
+        {
+            return _repositorie.FilterTickets2(folio, turno, fechaInicio, fechaFin, planta, proceso);
+        }
+
         public IList<TicketsInfo> GetPrintTickeyById(int id)
         {
             return _repositorie.GetPrintTickeyById(id);
@@ -43,6 +49,11 @@ namespace WebApiPtmHana.BLL.Services.TicketsInfoServ
         public IList<TicketsInfo> GetTickets(int planta)
         {
             return _repositorie.GetAll(planta);
+        }
+
+        public IList<TicketsInfo> GetTickets2(int planta, string proceso)
+        {
+            return _repositorie.GetAll2(planta, proceso);
         }
 
         public Task<bool> UpdateTicket(int idTicket, float peso,float pesoBascula, float porcentaje, bool calidad, decimal pesotubos, string? tubos, int planta)

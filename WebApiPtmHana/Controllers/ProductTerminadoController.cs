@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Sap.Data.Hana;
-using SAPbobsCOM;
+//using SAPbobsCOM;
 using WebApiPtmHana.BLL.Services.LineasServ;
 using WebApiPtmHana.BLL.Services.ProductoTServ;
 using WebApiPtmHana.BLL.Services.ScrapServ;
@@ -53,6 +53,7 @@ namespace WebApiPtmHana.Controllers
             public string Planta { get; set; }
             public string Usuario { get; set; }
             public string UserId { get; set; }
+            public string Proceso { get; set; }
         }
 
         public ProductTerminadoController(IProductoTerminado productoTerminado, ISkuInfo skuInformation, IConfiguration configuration,
@@ -79,7 +80,7 @@ namespace WebApiPtmHana.Controllers
                     float.Parse(request.Variable), request.ItemName, float.Parse(request.MinWeight),
                     float.Parse(request.FlejeCant), float.Parse(request.AnilloCant), float.Parse(request.MaderaCant),
                     float.Parse(request.ArpillaCant), float.Parse(request.CostalesCant), float.Parse(request.TarimaCant),
-                    numplanta, request.Usuario);
+                    numplanta, request.Usuario, request.Proceso);
 
                 if (result)
                 {

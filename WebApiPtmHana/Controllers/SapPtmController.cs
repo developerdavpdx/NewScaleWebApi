@@ -42,7 +42,7 @@ namespace WebApiPtmHana.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("GetAllPT")]
-        public async Task<IActionResult> GetAllOwor([FromHeader] string planta)
+        public async Task<IActionResult> GetAllOwor([FromHeader] string planta, [FromHeader] string? Corrugado, [FromHeader] string? IgnoreNewScale)
         {
             try
             {
@@ -58,7 +58,9 @@ namespace WebApiPtmHana.Controllers
                         command.CommandText = $"{prefijo}.SPPDX_GetSkuPT";
                         command.Connection = connection;
                         command.CommandType = CommandType.StoredProcedure;
-                        using(HanaDataReader reader = command.ExecuteReader())
+                        command.Parameters.Add("P_CORRUGADO", HanaDbType.NVarChar).Value = Corrugado;
+                        command.Parameters.Add("P_IGNORENEWSCALE", HanaDbType.Integer).Value = IgnoreNewScale != null ? int.Parse(IgnoreNewScale) : null;
+                        using (HanaDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)
                             {
@@ -89,7 +91,7 @@ namespace WebApiPtmHana.Controllers
 
         [HttpGet]
         [Route("GetPTbySku")]
-        public IActionResult GetSkuDetail([FromHeader] string sku, [FromHeader] string planta)
+        public IActionResult GetSkuDetail([FromHeader] string sku, [FromHeader] string planta, [FromHeader] string IgnoreNewScale)
         {
             try
             {
@@ -105,6 +107,7 @@ namespace WebApiPtmHana.Controllers
                         command.Connection = connection;
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("SKU", HanaDbType.NVarChar).Value = sku;
+                        command.Parameters.Add("P_IGNORENEWSCALE", HanaDbType.Integer).Value = IgnoreNewScale != null ? int.Parse(IgnoreNewScale) : null;
                         using (HanaDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)

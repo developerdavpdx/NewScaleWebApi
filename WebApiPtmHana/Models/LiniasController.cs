@@ -60,7 +60,7 @@ namespace WebApiPtmHana.Models
         {
             try
             {
-                if (!sku.IsNullOrEmpty() || !linea.IsNullOrEmpty())
+                if (!string.IsNullOrEmpty(sku) || !string.IsNullOrEmpty(linea))
                 {
                     int linia = int.Parse(linea);
                     int turnoOp = int.Parse(turno);

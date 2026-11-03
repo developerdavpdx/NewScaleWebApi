@@ -38,14 +38,14 @@
 
     public class KPISinfo
     {
-        public float Linea { get; set; }
-        public float Volumen { get; set; }
+        public float? Linea { get; set; }
+        public float? Volumen { get; set; }
         public string? Codigos { get; set; }
-        public float Sobrepeso { get; set; }
-        public float SobrepesoObjetivo { get; set; }
-        public float ScrapKG { get; set; }
-        public float ScrapPorcent { get; set; }
-        public float ScrapObjetivo { get; set; }
-        public float Eficiencia { get; set; }
+        public float? Sobrepeso { get; set; }
+        public float? SobrepesoObjetivo { get; set; }
+        public float? ScrapKG { get; set; }
+        public float? ScrapPorcent { get; set; }
+        public float? ScrapObjetivo { get; set; }
+        public float? Eficiencia { get; set; }
     }
 }

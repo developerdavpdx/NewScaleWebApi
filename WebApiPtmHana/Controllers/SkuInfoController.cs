@@ -1,18 +1,11 @@
 ﻿using System.Data;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
-using Sap.Data.Hana;
 using WebApiPtmHana.BLL.Services.BitacoraLServ;
 using WebApiPtmHana.BLL.Services.SkuInfoServ;
 using WebApiPtmHana.BLL.Services.UserTokenServ;
 using WebApiPtmHana.DAL.DataContext;
 using WebApiPtmHana.Datos;
-using WebApiPtmHana.Models;
-using WebApiPtmHana.Models.WeightCheck;
 using WebApiPtmHana.Services;
 using WebApiPTMTest.Models;
 using WebApiPTMTest.Services;
@@ -108,7 +101,7 @@ namespace WebApiPtmHana.Controllers
                 //if (!checkToken)
                 //    return StatusCode(StatusCodes.Status500InternalServerError, new { response = "El token a expirado. Favor de iniciar sesión de nueva cuenta" });
 
-                if (!sku.IsNullOrEmpty())
+                if (!string.IsNullOrEmpty(sku))
                 {
                     IList<SkuInfo> skuinfo = await _skuinfoService.GetDetalleSku(sku);
                     if (skuinfo.Count > 0)
@@ -151,7 +144,7 @@ namespace WebApiPtmHana.Controllers
                 //if (!checkToken)
                 //    return StatusCode(StatusCodes.Status500InternalServerError, new { response = "El token a expirado. Favor de iniciar sesión de nueva cuenta" });
 
-                if (!sku.IsNullOrEmpty() || !linea.IsNullOrEmpty())
+                if (!string.IsNullOrEmpty(sku) || !string.IsNullOrEmpty(linea))
                 {
                     int linia = int.Parse(linea);
                     int turnoOp = int.Parse(turno);

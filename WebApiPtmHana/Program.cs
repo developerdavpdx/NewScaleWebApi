@@ -54,7 +54,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
 builder.Services.AddDistributedMemoryCache();
@@ -96,12 +95,20 @@ builder.Services.AddScoped<ISkuInfo, SkuInfoService>();
 builder.Services.AddScoped<IHistorialPesadas, HistorialPesadasService>();
 builder.Services.AddScoped<ITaras, TarasService>();
 
-//builder.Services.AddHostedService<SheduleTurno1>();
-//builder.Services.AddHostedService<SheduleTurno2>();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// ✅ CORS CONFIGURADO ANTES DE builder.Build()
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var connectionString = builder.Configuration.GetConnectionString("DefaulConnection");
 builder.Services.AddSingleton(new HanaConnection(connectionString));
 
@@ -115,7 +122,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwaggerUI();
 }
 
-//JobManager.Initialize(new SheduleTurno1());
+// ✅ MIDDLEWARE DESPUÉS DE app.Build()
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
@@ -124,6 +132,9 @@ app.UseSession();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Initialize scheduler
+var schedulerTurno1 = new SheduleTurno1();
 
 Log.Information("API iniciada correctamente");
 

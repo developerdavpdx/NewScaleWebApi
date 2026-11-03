@@ -12,7 +12,7 @@ namespace WebApiPtmHana.BLL.Services.SkuInfoServ
         Task<IList<SkuInfo>> GetAllSkuInfos(int planta);
         Task<IList<SkuInfo>> GetDetalleSku(string sku);
         Task<bool> AsignLineToSKU(string sku, int linie, string userId, int turno, decimal kgxhr);
-        Task<bool> UpdateSkuById(string id, int  MultiploCant, string MultiploCat, float Variable, string itemName, float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario);
+        Task<bool> UpdateSkuById(string id, int  MultiploCant, string MultiploCat, float Variable, string itemName, float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario, string proceso);
         IList<SkuInfo> GetBySku(string sku, string planta);
     }
 }

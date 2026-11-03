@@ -15,6 +15,7 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.TicketsRepo
             _context = context;
         }
 
+        //obtiene los datos de los tickets pasados (para mostrar en "reimpresiones", al momento de buscar por filtros)
         public IList<TicketsInfo> FilterTickets(string? folio, int? turno, string? fechaInicio, string? fechaFin, int planta)
         {
             List<TicketsInfo> ticketsInfos = _context.TicketsInfos
@@ -52,6 +53,46 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.TicketsRepo
             return ticketsInfos;
         }
 
+        //obtiene los datos de los tickets pasados (para mostrar en "reimpresiones", al momento de buscar por filtros) (esta version filtra tambien por "proceso", usando "Categoria" como parametro para filtrar, actualmente solo se usa en corrugados, cuando se migre pvs e iny, se puede borrar la version pasada)
+        public IList<TicketsInfo> FilterTickets2(string? folio, int? turno, string? fechaInicio, string? fechaFin, int planta, string proceso)
+        {
+            List<TicketsInfo> ticketsInfos = _context.TicketsInfos
+                .Where(x => turno == null || x.Turno == turno)
+                .Where(x => x.PlantaTicket == planta)
+                .Where(x => x.Categoria == proceso) //<--
+                .Where(x => folio == null || x.Folio == folio)
+                .Where(x => (fechaInicio == null && fechaFin == null) ||
+                (x.FechaPesaje >= DateTime.Parse(fechaInicio) && x.FechaPesaje <= DateTime.Parse(fechaFin)))
+                .Select(x => new TicketsInfo
+                {
+                    IdTicket = x.IdTicket,
+                    Categoria = x.Categoria,
+                    Folio = x.Folio,
+                    Id_Linea = x.Id_Linea,
+                    ItemCode = x.ItemCode,
+                    ItemName = x.ItemName,
+                    Medida = x.Medida,
+                    NumTubos = x.NumTubos,
+                    Operacion = x.Operacion,
+                    OrdenFabricacion = x.OrdenFabricacion,
+                    PesoNeto = x.PesoNeto,
+                    Porcentaje = x.Porcentaje,
+                    Turno = x.Turno,
+                    Linea = new Lineas
+                    {
+                        Id_linea = x.Linea.Id_linea,
+                        Asignado = x.Linea.Asignado,
+                        Descripcion = x.Linea.Descripcion
+                    },
+                    AsignadoTicket = x.AsignadoTicket,
+                    FechaPesaje = x.FechaPesaje,
+                    PlantaTicket = x.PlantaTicket
+                }).ToList();
+
+            return ticketsInfos;
+        }
+
+        //obtiene los datos de los tickets pasados (para mostrar en "reimpresiones")
         public IList<TicketsInfo> GetAll(int planta)
         {
             DateTime horaInicioTurno1 = DateTime.Today.AddHours(4.5);
@@ -103,6 +144,94 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.TicketsRepo
 
                 IList<TicketsInfo> TicketsInfos = _context.TicketsInfos
                     .Where(x => x.PlantaTicket == planta)
+                    .Where(x => x.Linea != null)
+                    .Where(x => x.FechaPesaje >= horaInicioTurno2 && x.FechaPesaje <= horaFinTurno2)
+                    .Select(x => new TicketsInfo
+                    {
+                        IdTicket = x.IdTicket,
+                        Categoria = x.Categoria,
+                        Folio = x.Folio,
+                        Id_Linea = x.Id_Linea,
+                        ItemCode = x.ItemCode,
+                        ItemName = x.ItemName,
+                        Medida = x.Medida,
+                        NumTubos = x.NumTubos,
+                        Operacion = x.Operacion,
+                        OrdenFabricacion = x.OrdenFabricacion,
+                        PesoNeto = x.PesoNeto,
+                        Porcentaje = x.Porcentaje,
+                        Turno = x.Turno,
+                        Linea = new Lineas
+                        {
+                            Id_linea = x.Linea.Id_linea,
+                            Asignado = x.Linea.Asignado,
+                            Descripcion = x.Linea.Descripcion
+                        },
+                        AsignadoTicket = x.AsignadoTicket,
+                        FechaPesaje = x.FechaPesaje,
+                        PlantaTicket = x.PlantaTicket
+                    }).ToList();
+
+                return TicketsInfos;
+            }
+
+        }
+
+        //obtiene los datos de los tickets pasados (para mostrar en "reimpresiones") (esta version filtra tambien por "proceso", usando "Categoria" como parametro para filtrar, actualmente solo se usa en corrugados, cuando se migre pvs e iny, se puede borrar la version pasada)
+        public IList<TicketsInfo> GetAll2(int planta, string proceso)
+        {
+            DateTime horaInicioTurno1 = DateTime.Today.AddHours(4.5);
+            DateTime horaFinTurno1 = DateTime.Today.AddHours(16.5);
+            DateTime horaInicioTurno2 = DateTime.Today.AddHours(16.5);
+            DateTime horaFinTurno2 = DateTime.Today.AddDays(1).AddHours(4.5);
+            DateTime horaActual = DateTime.Now;
+            if (horaActual >= horaInicioTurno1 && horaActual <= horaFinTurno1)
+            {
+
+                IList<TicketsInfo> TicketsInfos = _context.TicketsInfos
+                    .Where(x => x.PlantaTicket == planta)
+                    .Where(x => x.Categoria == proceso)
+                    .Where(x => x.Linea != null)
+                    .Where(x => x.FechaPesaje >= horaInicioTurno1 && x.FechaPesaje <= horaFinTurno1)
+                    .Select(x => new TicketsInfo
+                    {
+                        IdTicket = x.IdTicket,
+                        Categoria = x.Categoria,
+                        Folio = x.Folio,
+                        Id_Linea = x.Id_Linea,
+                        ItemCode = x.ItemCode,
+                        ItemName = x.ItemName,
+                        Medida = x.Medida,
+                        NumTubos = x.NumTubos,
+                        Operacion = x.Operacion,
+                        OrdenFabricacion = x.OrdenFabricacion,
+                        PesoNeto = x.PesoNeto,
+                        Porcentaje = x.Porcentaje,
+                        Turno = x.Turno,
+                        Linea = new Lineas
+                        {
+                            Id_linea = x.Linea.Id_linea,
+                            Asignado = x.Linea.Asignado,
+                            Descripcion = x.Linea.Descripcion
+                        },
+                        AsignadoTicket = x.AsignadoTicket,
+                        FechaPesaje = x.FechaPesaje,
+                        PlantaTicket = x.PlantaTicket
+                    }).ToList();
+
+                return TicketsInfos;
+            }
+            else
+            {
+                if (horaActual.Hour >= 0 && horaActual.Hour < 4 || (horaActual.Hour == 4 && horaActual.Minute <= 30))
+                {
+                    horaInicioTurno2 = horaInicioTurno2.AddDays(-1);
+                    horaFinTurno2 = horaFinTurno2.AddDays(-1);
+                }
+
+                IList<TicketsInfo> TicketsInfos = _context.TicketsInfos
+                    .Where(x => x.PlantaTicket == planta)
+                    .Where(x => x.Categoria == proceso)
                     .Where(x => x.Linea != null)
                     .Where(x => x.FechaPesaje >= horaInicioTurno2 && x.FechaPesaje <= horaFinTurno2)
                     .Select(x => new TicketsInfo

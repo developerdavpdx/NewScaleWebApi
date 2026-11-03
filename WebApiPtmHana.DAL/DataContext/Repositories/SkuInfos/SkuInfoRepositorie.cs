@@ -20,7 +20,7 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.SkuInfos
         {
             try
             {
-                if (!sku.IsNullOrEmpty() && line != 0)
+                if (!string.IsNullOrEmpty(sku) && line != 0)
                 {
                     int idSKU = int.Parse(sku);
                     IList<SkuInfo> skuInfos = _context.SkuInfos.Where(x => x.Id == idSKU).ToList();
@@ -88,7 +88,7 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.SkuInfos
         }
 
         public async Task<bool> UpdateById(string id, int  MultiploCant, string MultiploCat, float Variable, string itemName, 
-            float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario)
+            float minWeight, float flejeCant, float anilloCant, float maderaCant, float arpillaCant, float costalesCant, float tarimaCant, int planta, string usuario, string proceso)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.SkuInfos
                         MultiploCant = MultiploCant,
                         MultiploCategoria = MultiploCat,
                         Variable = Variable,
-                        Proceso = "PT",
+                        Proceso = string.IsNullOrWhiteSpace(proceso) ? "PT" : proceso,
                         ItemName = itemName,
                         MinWeight = minWeight,
                         AnilloCant = anilloCant,
@@ -137,6 +137,10 @@ namespace WebApiPtmHana.DAL.DataContext.Repositories.SkuInfos
                     skuinfo.TarimaCant = tarimaCant;
                     skuinfo.FlejeCant = flejeCant;
                     skuinfo.Usuario = usuario;
+                    if (!string.IsNullOrWhiteSpace(proceso))
+                    {
+                        skuinfo.Proceso = proceso;
+                    }
 
                     _context.Update(skuinfo);
                     await _context.SaveChangesAsync();

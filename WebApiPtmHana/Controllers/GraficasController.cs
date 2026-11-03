@@ -1,15 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Globalization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 using WebApiPtmHana.BLL.Services.ScrapServ;
 using WebApiPtmHana.DAL.DataContext;
-using WebApiPtmHana.Datos;
 using WebApiPtmHana.Models.Graficas;
-using WebApiPtmHana.Models.Reportes;
 
 namespace WebApiPtmHana.Controllers
 {
